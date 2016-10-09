@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eVv-eb-5Wc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gif DetailsUI-->
+        <scene sceneID="rRl-Xh-QHx">
+            <objects>
+                <viewController id="eVv-eb-5Wc" customClass="GifDetailsUI" customModule="Protium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tJH-Xd-agt"/>
+                        <viewControllerLayoutGuide type="bottom" id="70v-eJ-gZd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Tt-wS-8Z3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-4m-p3Q">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNh-tB-6n8">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Copy Embed Link" image="iconLink">
+                                            <color key="titleColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My5-eR-xDD">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Open Giphy" image="iconOpen">
+                                            <color key="titleColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmM-Zm-Hj9">
+                                <color key="backgroundColor" red="0.11233455687761307" green="0.11235726624727249" blue="0.11232957988977432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="WJY-bK-JSU"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="BBc-9s-Crh" kind="embed" identifier="gifPlayer" id="8h7-vP-Wnx"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wmM-Zm-Hj9" firstAttribute="leading" secondItem="6Tt-wS-8Z3" secondAttribute="leading" constant="16" id="9ab-WF-EnE"/>
+                            <constraint firstItem="JE9-4m-p3Q" firstAttribute="top" secondItem="wmM-Zm-Hj9" secondAttribute="bottom" constant="30" id="AGR-IL-DeY"/>
+                            <constraint firstItem="wmM-Zm-Hj9" firstAttribute="top" secondItem="tJH-Xd-agt" secondAttribute="bottom" id="b1P-Hi-JJh"/>
+                            <constraint firstAttribute="trailing" secondItem="wmM-Zm-Hj9" secondAttribute="trailing" constant="16" id="git-C1-PDD"/>
+                            <constraint firstItem="JE9-4m-p3Q" firstAttribute="leading" secondItem="wmM-Zm-Hj9" secondAttribute="leading" id="wcv-ii-Tqu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyEmbedLinkButton" destination="mNh-tB-6n8" id="zgA-il-Bgp"/>
+                        <outlet property="openGiphyButton" destination="My5-eR-xDD" id="5T6-dG-kgr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4x-Jb-C94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="-221.73913043478262"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="jPd-8S-pJc">
+            <objects>
+                <avPlayerViewController showsPlaybackControls="NO" videoGravity="AVLayerVideoGravityResizeAspect" id="BBc-9s-Crh" customClass="GifPlayerViewController" customModule="Protium" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anp-we-jbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="-222"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconLink" width="20" height="20"/>
+        <image name="iconOpen" width="20" height="20"/>
+    </resources>
+</document>

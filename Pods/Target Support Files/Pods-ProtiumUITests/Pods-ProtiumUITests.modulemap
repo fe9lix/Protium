@@ -1,0 +1,6 @@
+framework module Pods_ProtiumUITests {
+  umbrella header "Pods-ProtiumUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

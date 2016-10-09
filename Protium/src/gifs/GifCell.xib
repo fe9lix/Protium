@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GifCell" customModule="Protium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pya-pP-dNA"/>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pya-pP-dNA" secondAttribute="trailing" id="PSE-dh-vJD"/>
+                <constraint firstItem="pya-pP-dNA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="afr-dL-RnQ"/>
+                <constraint firstItem="pya-pP-dNA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="f3w-Jl-aMN"/>
+                <constraint firstAttribute="bottom" secondItem="pya-pP-dNA" secondAttribute="bottom" id="oVT-Ks-jqS"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="pya-pP-dNA" id="i2x-BT-RLT"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

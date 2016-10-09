@@ -1,0 +1,30 @@
+PODS:
+  - JASON (3.0)
+  - Kingfisher (3.1.1)
+  - RxBlocking (3.0.0-beta.2):
+    - RxSwift (~> 3.0.0-beta.2)
+  - RxCocoa (3.0.0-beta.2):
+    - RxSwift (~> 3.0.0-beta.2)
+  - RxSwift (3.0.0-beta.2)
+  - RxTests (3.0.0-beta.2):
+    - RxSwift (~> 3.0.0-beta.2)
+
+DEPENDENCIES:
+  - JASON
+  - Kingfisher (= 3.1.1)
+  - RxBlocking (= 3.0.0-beta.2)
+  - RxCocoa (= 3.0.0-beta.2)
+  - RxSwift (= 3.0.0-beta.2)
+  - RxTests (= 3.0.0-beta.2)
+
+SPEC CHECKSUMS:
+  JASON: cf4d762e61428a20db8eaef2acb6a569a10c1801
+  Kingfisher: 12b755ae697cc9f0fd3e550db8417fa1233e09ab
+  RxBlocking: 75dad8ed874b732da94780fdf7cf48eabf0d5d2b
+  RxCocoa: 1dd105d8a4e18034ccd7bd6d136445363ce67c8e
+  RxSwift: 0ea939d7d97cb70657190ffde8dc2a9b455778fc
+  RxTests: 9b696439878a1c7653bb55853af027fc261d0635
+
+PODFILE CHECKSUM: 6f0018b65760ac7a8f462654e4fd7e3f3c05aae8
+
+COCOAPODS: 1.0.1

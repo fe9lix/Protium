@@ -1,0 +1,855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DD8A983241EBD40E68D6401 /* Pods_Protium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEBEF9E206E1ED1233E4C63 /* Pods_Protium.framework */; };
+		A9C27255A864D04718BF5F9D /* Pods_ProtiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2265D97729B826F01324FB /* Pods_ProtiumTests.framework */; };
+		B50B117889A7E7FDBDEC9B3F /* Pods_ProtiumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC02B99D4C0132B63CE1AB3A /* Pods_ProtiumUITests.framework */; };
+		DC1941D01DA591450027A97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941CD1DA591450027A97A /* AppDelegate.swift */; };
+		DC1941D51DA592570027A97A /* GifGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941D41DA592570027A97A /* GifGateway.swift */; };
+		DC1941D81DA59ACA0027A97A /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941D71DA59ACA0027A97A /* Gif.swift */; };
+		DC1941DD1DA5A96E0027A97A /* GifSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941DC1DA5A96E0027A97A /* GifSearchInteractor.swift */; };
+		DC1941DF1DA5AB270027A97A /* GifPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941DE1DA5AB270027A97A /* GifPM.swift */; };
+		DC1941E11DA5AD0B0027A97A /* GifSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E01DA5AD0B0027A97A /* GifSearchUI.swift */; };
+		DC1941E31DA5B0430027A97A /* GifSearchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E21DA5B0430027A97A /* GifSearchScene.swift */; };
+		DC1941E51DA5B0850027A97A /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E41DA5B0850027A97A /* Context.swift */; };
+		DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E61DA6DCB40027A97A /* InteractableUI.swift */; };
+		DC1941E91DA6E9630027A97A /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E81DA6E9630027A97A /* MainScene.swift */; };
+		DC1941EB1DA6EB800027A97A /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941EA1DA6EB800027A97A /* NavigationContext.swift */; };
+		DC1941ED1DA6EDCA0027A97A /* WindowContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941EC1DA6EDCA0027A97A /* WindowContext.swift */; };
+		DC1941EF1DA6F03A0027A97A /* GifSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1941EE1DA6F03A0027A97A /* GifSearch.storyboard */; };
+		DC7B69DC1DA94FC100EC2CF3 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69DA1DA94FC100EC2CF3 /* GifCell.swift */; };
+		DC7B69DD1DA94FC100EC2CF3 /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7B69DB1DA94FC100EC2CF3 /* GifCell.xib */; };
+		DC7B69DF1DA95E1A00EC2CF3 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */; };
+		DC7B69E11DA95EA100EC2CF3 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */; };
+		DC7B69E31DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69E21DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift */; };
+		DC7B69E91DA9A7C800EC2CF3 /* GifDetailsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69E81DA9A7C800EC2CF3 /* GifDetailsScene.swift */; };
+		DC7B69EB1DA9AAC200EC2CF3 /* GifDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69EA1DA9AAC200EC2CF3 /* GifDetailsUI.swift */; };
+		DC7B69ED1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69EC1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift */; };
+		DC7B69EF1DA9AB9C00EC2CF3 /* GifDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7B69EE1DA9AB9C00EC2CF3 /* GifDetails.storyboard */; };
+		DC7B69F11DAA378600EC2CF3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69F01DAA378600EC2CF3 /* Theme.swift */; };
+		DC7B69F91DAA955600EC2CF3 /* GifPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69F81DAA955600EC2CF3 /* GifPlayerViewController.swift */; };
+		DC7B69FC1DAA9AFA00EC2CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC7B69FE1DAA9AFA00EC2CF3 /* Localizable.strings */; };
+		DC7B6A001DAA9B2A00EC2CF3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */; };
+		DC8C2CC51DA58D4600F2A211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8C2CC41DA58D4600F2A211 /* Assets.xcassets */; };
+		DC8C2CC81DA58D4600F2A211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8C2CC61DA58D4600F2A211 /* LaunchScreen.storyboard */; };
+		DC8C2CD31DA58D4600F2A211 /* ProtiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */; };
+		DC8C2CDE1DA58D4600F2A211 /* ProtiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC8C2CCF1DA58D4600F2A211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC8C2CB21DA58D4600F2A211 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC8C2CB91DA58D4600F2A211;
+			remoteInfo = Protium;
+		};
+		DC8C2CDA1DA58D4600F2A211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC8C2CB21DA58D4600F2A211 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC8C2CB91DA58D4600F2A211;
+			remoteInfo = Protium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B779E032CB69A416068C14C /* Pods-ProtiumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumUITests/Pods-ProtiumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1FC2636B8BA0C3000BF6FDBA /* Pods-ProtiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.release.xcconfig"; sourceTree = "<group>"; };
+		37D38CC4FD1DC5B52E1BA04D /* Pods-ProtiumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumUITests/Pods-ProtiumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		386CCE1285A3C0AE7BD24E95 /* Pods-Protium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Protium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Protium/Pods-Protium.release.xcconfig"; sourceTree = "<group>"; };
+		4455BD94460E7CB42F62DACF /* Pods-Protium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Protium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Protium/Pods-Protium.debug.xcconfig"; sourceTree = "<group>"; };
+		4CEBEF9E206E1ED1233E4C63 /* Pods_Protium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Protium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC02B99D4C0132B63CE1AB3A /* Pods_ProtiumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProtiumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2265D97729B826F01324FB /* Pods_ProtiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProtiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1941CD1DA591450027A97A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = main/AppDelegate.swift; sourceTree = "<group>"; };
+		DC1941D41DA592570027A97A /* GifGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifGateway.swift; sourceTree = "<group>"; };
+		DC1941D71DA59ACA0027A97A /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		DC1941DC1DA5A96E0027A97A /* GifSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchInteractor.swift; sourceTree = "<group>"; };
+		DC1941DE1DA5AB270027A97A /* GifPM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPM.swift; sourceTree = "<group>"; };
+		DC1941E01DA5AD0B0027A97A /* GifSearchUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchUI.swift; sourceTree = "<group>"; };
+		DC1941E21DA5B0430027A97A /* GifSearchScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchScene.swift; sourceTree = "<group>"; };
+		DC1941E41DA5B0850027A97A /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		DC1941E61DA6DCB40027A97A /* InteractableUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractableUI.swift; sourceTree = "<group>"; };
+		DC1941E81DA6E9630027A97A /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScene.swift; path = main/MainScene.swift; sourceTree = "<group>"; };
+		DC1941EA1DA6EB800027A97A /* NavigationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationContext.swift; sourceTree = "<group>"; };
+		DC1941EC1DA6EDCA0027A97A /* WindowContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowContext.swift; sourceTree = "<group>"; };
+		DC1941EE1DA6F03A0027A97A /* GifSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GifSearch.storyboard; sourceTree = "<group>"; };
+		DC7B69DA1DA94FC100EC2CF3 /* GifCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
+		DC7B69DB1DA94FC100EC2CF3 /* GifCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
+		DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		DC7B69E21DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		DC7B69E81DA9A7C800EC2CF3 /* GifDetailsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsScene.swift; sourceTree = "<group>"; };
+		DC7B69EA1DA9AAC200EC2CF3 /* GifDetailsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsUI.swift; sourceTree = "<group>"; };
+		DC7B69EC1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsInteractor.swift; sourceTree = "<group>"; };
+		DC7B69EE1DA9AB9C00EC2CF3 /* GifDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GifDetails.storyboard; sourceTree = "<group>"; };
+		DC7B69F01DAA378600EC2CF3 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DC7B69F41DAA90AB00EC2CF3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		DC7B69F61DAA90B100EC2CF3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DC7B69F81DAA955600EC2CF3 /* GifPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPlayerViewController.swift; sourceTree = "<group>"; };
+		DC7B69FD1DAA9AFA00EC2CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		DC8C2CBA1DA58D4600F2A211 /* Protium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8C2CC41DA58D4600F2A211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC8C2CC71DA58D4600F2A211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC8C2CC91DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC8C2CCE1DA58D4600F2A211 /* ProtiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtiumTests.swift; sourceTree = "<group>"; };
+		DC8C2CD41DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC8C2CD91DA58D4600F2A211 /* ProtiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtiumUITests.swift; sourceTree = "<group>"; };
+		DC8C2CDF1DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC8C2CB71DA58D4600F2A211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD8A983241EBD40E68D6401 /* Pods_Protium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8C2CCB1DA58D4600F2A211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9C27255A864D04718BF5F9D /* Pods_ProtiumTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8C2CD61DA58D4600F2A211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50B117889A7E7FDBDEC9B3F /* Pods_ProtiumUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89A3AAD490BC3368247002DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC7B69F61DAA90B100EC2CF3 /* AVFoundation.framework */,
+				DC7B69F41DAA90AB00EC2CF3 /* AVKit.framework */,
+				4CEBEF9E206E1ED1233E4C63 /* Pods_Protium.framework */,
+				DB2265D97729B826F01324FB /* Pods_ProtiumTests.framework */,
+				AC02B99D4C0132B63CE1AB3A /* Pods_ProtiumUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC1941C51DA5908B0027A97A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DC1941D91DA5A2F90027A97A /* base */,
+				DC1941D31DA5918A0027A97A /* gifs */,
+				DC1941CC1DA5910F0027A97A /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DC1941CC1DA5910F0027A97A /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DC1941CD1DA591450027A97A /* AppDelegate.swift */,
+				DC1941E81DA6E9630027A97A /* MainScene.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		DC1941D31DA5918A0027A97A /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				DC1941D71DA59ACA0027A97A /* Gif.swift */,
+				DC7B69DA1DA94FC100EC2CF3 /* GifCell.swift */,
+				DC7B69DB1DA94FC100EC2CF3 /* GifCell.xib */,
+				DC7B69EE1DA9AB9C00EC2CF3 /* GifDetails.storyboard */,
+				DC7B69EC1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift */,
+				DC7B69E81DA9A7C800EC2CF3 /* GifDetailsScene.swift */,
+				DC7B69EA1DA9AAC200EC2CF3 /* GifDetailsUI.swift */,
+				DC1941D41DA592570027A97A /* GifGateway.swift */,
+				DC7B69F81DAA955600EC2CF3 /* GifPlayerViewController.swift */,
+				DC1941DE1DA5AB270027A97A /* GifPM.swift */,
+				DC1941EE1DA6F03A0027A97A /* GifSearch.storyboard */,
+				DC1941DC1DA5A96E0027A97A /* GifSearchInteractor.swift */,
+				DC1941E21DA5B0430027A97A /* GifSearchScene.swift */,
+				DC1941E01DA5AD0B0027A97A /* GifSearchUI.swift */,
+			);
+			path = gifs;
+			sourceTree = "<group>";
+		};
+		DC1941D91DA5A2F90027A97A /* base */ = {
+			isa = PBXGroup;
+			children = (
+				DC1941E41DA5B0850027A97A /* Context.swift */,
+				DC1941E61DA6DCB40027A97A /* InteractableUI.swift */,
+				DC1941EA1DA6EB800027A97A /* NavigationContext.swift */,
+				DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */,
+				DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */,
+				DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */,
+				DC7B69F01DAA378600EC2CF3 /* Theme.swift */,
+				DC7B69E21DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift */,
+				DC1941EC1DA6EDCA0027A97A /* WindowContext.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		DC8C2CB11DA58D4600F2A211 = {
+			isa = PBXGroup;
+			children = (
+				DC8C2CBC1DA58D4600F2A211 /* Protium */,
+				DC8C2CD11DA58D4600F2A211 /* ProtiumTests */,
+				DC8C2CDC1DA58D4600F2A211 /* ProtiumUITests */,
+				DC8C2CBB1DA58D4600F2A211 /* Products */,
+				E5732A52E397A6B9BF7DD093 /* Pods */,
+				89A3AAD490BC3368247002DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DC8C2CBB1DA58D4600F2A211 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC8C2CBA1DA58D4600F2A211 /* Protium.app */,
+				DC8C2CCE1DA58D4600F2A211 /* ProtiumTests.xctest */,
+				DC8C2CD91DA58D4600F2A211 /* ProtiumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC8C2CBC1DA58D4600F2A211 /* Protium */ = {
+			isa = PBXGroup;
+			children = (
+				DC1941C51DA5908B0027A97A /* src */,
+				DC8C2CC41DA58D4600F2A211 /* Assets.xcassets */,
+				DC7B69FE1DAA9AFA00EC2CF3 /* Localizable.strings */,
+				DC8C2CC61DA58D4600F2A211 /* LaunchScreen.storyboard */,
+				DC8C2CC91DA58D4600F2A211 /* Info.plist */,
+			);
+			path = Protium;
+			sourceTree = "<group>";
+		};
+		DC8C2CD11DA58D4600F2A211 /* ProtiumTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */,
+				DC8C2CD41DA58D4600F2A211 /* Info.plist */,
+			);
+			path = ProtiumTests;
+			sourceTree = "<group>";
+		};
+		DC8C2CDC1DA58D4600F2A211 /* ProtiumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */,
+				DC8C2CDF1DA58D4600F2A211 /* Info.plist */,
+			);
+			path = ProtiumUITests;
+			sourceTree = "<group>";
+		};
+		E5732A52E397A6B9BF7DD093 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4455BD94460E7CB42F62DACF /* Pods-Protium.debug.xcconfig */,
+				386CCE1285A3C0AE7BD24E95 /* Pods-Protium.release.xcconfig */,
+				DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */,
+				1FC2636B8BA0C3000BF6FDBA /* Pods-ProtiumTests.release.xcconfig */,
+				37D38CC4FD1DC5B52E1BA04D /* Pods-ProtiumUITests.debug.xcconfig */,
+				0B779E032CB69A416068C14C /* Pods-ProtiumUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC8C2CB91DA58D4600F2A211 /* Protium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8C2CE21DA58D4600F2A211 /* Build configuration list for PBXNativeTarget "Protium" */;
+			buildPhases = (
+				E52E16785FB14CD1DFBB03A4 /* [CP] Check Pods Manifest.lock */,
+				DC8C2CB61DA58D4600F2A211 /* Sources */,
+				DC8C2CB71DA58D4600F2A211 /* Frameworks */,
+				DC8C2CB81DA58D4600F2A211 /* Resources */,
+				DBBAC5D60CEFE69669A2067D /* [CP] Embed Pods Frameworks */,
+				D44F6AC0C81F91B8A032BD5E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Protium;
+			productName = Protium;
+			productReference = DC8C2CBA1DA58D4600F2A211 /* Protium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC8C2CCD1DA58D4600F2A211 /* ProtiumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8C2CE51DA58D4600F2A211 /* Build configuration list for PBXNativeTarget "ProtiumTests" */;
+			buildPhases = (
+				04D0744913D5F3FEA2989C7C /* [CP] Check Pods Manifest.lock */,
+				DC8C2CCA1DA58D4600F2A211 /* Sources */,
+				DC8C2CCB1DA58D4600F2A211 /* Frameworks */,
+				DC8C2CCC1DA58D4600F2A211 /* Resources */,
+				88EC3A7BA86606446A23B452 /* [CP] Embed Pods Frameworks */,
+				66EB02A1C0A992D56C9D1845 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC8C2CD01DA58D4600F2A211 /* PBXTargetDependency */,
+			);
+			name = ProtiumTests;
+			productName = ProtiumTests;
+			productReference = DC8C2CCE1DA58D4600F2A211 /* ProtiumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC8C2CD81DA58D4600F2A211 /* ProtiumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8C2CE81DA58D4600F2A211 /* Build configuration list for PBXNativeTarget "ProtiumUITests" */;
+			buildPhases = (
+				15DCE3FBE39F73275B21484A /* [CP] Check Pods Manifest.lock */,
+				DC8C2CD51DA58D4600F2A211 /* Sources */,
+				DC8C2CD61DA58D4600F2A211 /* Frameworks */,
+				DC8C2CD71DA58D4600F2A211 /* Resources */,
+				0FFD44434F4F7749BD3368FC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC8C2CDB1DA58D4600F2A211 /* PBXTargetDependency */,
+			);
+			name = ProtiumUITests;
+			productName = ProtiumUITests;
+			productReference = DC8C2CD91DA58D4600F2A211 /* ProtiumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC8C2CB21DA58D4600F2A211 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "protium-labs";
+				TargetAttributes = {
+					DC8C2CB91DA58D4600F2A211 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8B6Q2FRE35;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					DC8C2CCD1DA58D4600F2A211 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8B6Q2FRE35;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC8C2CB91DA58D4600F2A211;
+					};
+					DC8C2CD81DA58D4600F2A211 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8B6Q2FRE35;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC8C2CB91DA58D4600F2A211;
+					};
+				};
+			};
+			buildConfigurationList = DC8C2CB51DA58D4600F2A211 /* Build configuration list for PBXProject "Protium" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC8C2CB11DA58D4600F2A211;
+			productRefGroup = DC8C2CBB1DA58D4600F2A211 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC8C2CB91DA58D4600F2A211 /* Protium */,
+				DC8C2CCD1DA58D4600F2A211 /* ProtiumTests */,
+				DC8C2CD81DA58D4600F2A211 /* ProtiumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC8C2CB81DA58D4600F2A211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8C2CC81DA58D4600F2A211 /* LaunchScreen.storyboard in Resources */,
+				DC7B69FC1DAA9AFA00EC2CF3 /* Localizable.strings in Resources */,
+				DC8C2CC51DA58D4600F2A211 /* Assets.xcassets in Resources */,
+				DC7B69EF1DA9AB9C00EC2CF3 /* GifDetails.storyboard in Resources */,
+				DC7B69DD1DA94FC100EC2CF3 /* GifCell.xib in Resources */,
+				DC1941EF1DA6F03A0027A97A /* GifSearch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8C2CCC1DA58D4600F2A211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8C2CD71DA58D4600F2A211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04D0744913D5F3FEA2989C7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0FFD44434F4F7749BD3368FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProtiumUITests/Pods-ProtiumUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15DCE3FBE39F73275B21484A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66EB02A1C0A992D56C9D1845 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88EC3A7BA86606446A23B452 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D44F6AC0C81F91B8A032BD5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Protium/Pods-Protium-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBBAC5D60CEFE69669A2067D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Protium/Pods-Protium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E52E16785FB14CD1DFBB03A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC8C2CB61DA58D4600F2A211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC7B69E31DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift in Sources */,
+				DC1941ED1DA6EDCA0027A97A /* WindowContext.swift in Sources */,
+				DC7B69DC1DA94FC100EC2CF3 /* GifCell.swift in Sources */,
+				DC1941E91DA6E9630027A97A /* MainScene.swift in Sources */,
+				DC1941E31DA5B0430027A97A /* GifSearchScene.swift in Sources */,
+				DC7B69F11DAA378600EC2CF3 /* Theme.swift in Sources */,
+				DC7B6A001DAA9B2A00EC2CF3 /* StringExtensions.swift in Sources */,
+				DC7B69E91DA9A7C800EC2CF3 /* GifDetailsScene.swift in Sources */,
+				DC1941D51DA592570027A97A /* GifGateway.swift in Sources */,
+				DC7B69F91DAA955600EC2CF3 /* GifPlayerViewController.swift in Sources */,
+				DC7B69ED1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift in Sources */,
+				DC7B69EB1DA9AAC200EC2CF3 /* GifDetailsUI.swift in Sources */,
+				DC7B69DF1DA95E1A00EC2CF3 /* ReusableView.swift in Sources */,
+				DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */,
+				DC7B69E11DA95EA100EC2CF3 /* NibLoadableView.swift in Sources */,
+				DC1941E51DA5B0850027A97A /* Context.swift in Sources */,
+				DC1941DD1DA5A96E0027A97A /* GifSearchInteractor.swift in Sources */,
+				DC1941D81DA59ACA0027A97A /* Gif.swift in Sources */,
+				DC1941DF1DA5AB270027A97A /* GifPM.swift in Sources */,
+				DC1941E11DA5AD0B0027A97A /* GifSearchUI.swift in Sources */,
+				DC1941D01DA591450027A97A /* AppDelegate.swift in Sources */,
+				DC1941EB1DA6EB800027A97A /* NavigationContext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8C2CCA1DA58D4600F2A211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8C2CD31DA58D4600F2A211 /* ProtiumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8C2CD51DA58D4600F2A211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8C2CDE1DA58D4600F2A211 /* ProtiumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC8C2CD01DA58D4600F2A211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC8C2CB91DA58D4600F2A211 /* Protium */;
+			targetProxy = DC8C2CCF1DA58D4600F2A211 /* PBXContainerItemProxy */;
+		};
+		DC8C2CDB1DA58D4600F2A211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC8C2CB91DA58D4600F2A211 /* Protium */;
+			targetProxy = DC8C2CDA1DA58D4600F2A211 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC7B69FE1DAA9AFA00EC2CF3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC7B69FD1DAA9AFA00EC2CF3 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DC8C2CC61DA58D4600F2A211 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC8C2CC71DA58D4600F2A211 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC8C2CE01DA58D4600F2A211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC8C2CE11DA58D4600F2A211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC8C2CE31DA58D4600F2A211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4455BD94460E7CB42F62DACF /* Pods-Protium.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8B6Q2FRE35;
+				INFOPLIST_FILE = Protium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.protium-labs.Protium";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DC8C2CE41DA58D4600F2A211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 386CCE1285A3C0AE7BD24E95 /* Pods-Protium.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8B6Q2FRE35;
+				INFOPLIST_FILE = Protium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.protium-labs.Protium";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DC8C2CE61DA58D4600F2A211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8B6Q2FRE35;
+				INFOPLIST_FILE = ProtiumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.protium-labs.ProtiumTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Protium.app/Protium";
+			};
+			name = Debug;
+		};
+		DC8C2CE71DA58D4600F2A211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC2636B8BA0C3000BF6FDBA /* Pods-ProtiumTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8B6Q2FRE35;
+				INFOPLIST_FILE = ProtiumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.protium-labs.ProtiumTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Protium.app/Protium";
+			};
+			name = Release;
+		};
+		DC8C2CE91DA58D4600F2A211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37D38CC4FD1DC5B52E1BA04D /* Pods-ProtiumUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8B6Q2FRE35;
+				INFOPLIST_FILE = ProtiumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.protium-labs.ProtiumUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Protium;
+			};
+			name = Debug;
+		};
+		DC8C2CEA1DA58D4600F2A211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B779E032CB69A416068C14C /* Pods-ProtiumUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8B6Q2FRE35;
+				INFOPLIST_FILE = ProtiumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.protium-labs.ProtiumUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Protium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC8C2CB51DA58D4600F2A211 /* Build configuration list for PBXProject "Protium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8C2CE01DA58D4600F2A211 /* Debug */,
+				DC8C2CE11DA58D4600F2A211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8C2CE21DA58D4600F2A211 /* Build configuration list for PBXNativeTarget "Protium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8C2CE31DA58D4600F2A211 /* Debug */,
+				DC8C2CE41DA58D4600F2A211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8C2CE51DA58D4600F2A211 /* Build configuration list for PBXNativeTarget "ProtiumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8C2CE61DA58D4600F2A211 /* Debug */,
+				DC8C2CE71DA58D4600F2A211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8C2CE81DA58D4600F2A211 /* Build configuration list for PBXNativeTarget "ProtiumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8C2CE91DA58D4600F2A211 /* Debug */,
+				DC8C2CEA1DA58D4600F2A211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC8C2CB21DA58D4600F2A211 /* Project object */;
+}
