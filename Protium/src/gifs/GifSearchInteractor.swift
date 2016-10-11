@@ -32,27 +32,28 @@ final class GifSearchInteractor {
             }
     }
     
-    private func searchGifs(loaded: [Gif], query: String, nextPage: Observable<Void>) -> Observable<[Gif]> {
+    private func searchGifs(loaded: [Gif], query: String, nextPage: Observable<Void>) -> Observable<GifList> {
         return gateway.searchGifs(query: query, page: (offset: max(0, loaded.count - 1), limit: GifSearchInteractor.perPageLimit))
-            .flatMap { gifs -> Observable<[Gif]> in
-                if gifs.isEmpty {
-                    return Observable.just(loaded)
+            .flatMap { gifList -> Observable<GifList> in
+                var loadedList = gifList
+                loadedList.items = loaded + gifList.items
+                
+                if loadedList.items.count >= loadedList.totalCount {
+                    return Observable.just(loadedList)
                 }
                 
-                let loadedGifs = loaded + gifs
-                
                 return Observable.concat([
-                    Observable.just(loadedGifs),
+                    Observable.just(loadedList),
                     Observable.never().takeUntil(nextPage),
-                    self.searchGifs(loaded: loadedGifs, query: query, nextPage: nextPage)
+                    self.searchGifs(loaded: loadedList.items, query: query, nextPage: nextPage)
                     ])
         }
     }
     
-    private func toPresentation(gifs: Observable<[Gif]>) -> Driver<[GifPM]> {
+    private func toPresentation(gifs: Observable<GifList>) -> Driver<[GifPM]> {
         return gifs.retry()
             .observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .background))
-            .map { $0.map(GifPM.init) }
+            .map { $0.items.map(GifPM.init) }
             .asDriver(onErrorJustReturn: [])
     }
 }

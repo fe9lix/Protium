@@ -3,11 +3,12 @@ import RxSwift
 import RxCocoa
 import JASON
 
-typealias GifResultPage = (offset: Int, limit: Int)
+typealias GifPage = (offset: Int, limit: Int)
+typealias GifList = (items: [Gif], totalCount: Int)
 
 protocol GifGate {
-    func searchGifs(query: String, page: GifResultPage) -> Observable<[Gif]>
-    func fetchTrending(limit: Int) -> Observable<[Gif]>
+    func searchGifs(query: String, page: GifPage) -> Observable<GifList>
+    func fetchTrending(limit: Int) -> Observable<GifList>
 }
 
 enum GifGateError: Error {
@@ -28,19 +29,25 @@ final class GifGateway: GifGate {
         self.urlComponents = urlComponents
     }
     
-    func searchGifs(query: String, page: GifResultPage) -> Observable<[Gif]> {
+    func searchGifs(query: String, page: GifPage) -> Observable<GifList> {
         return fetchGifs(path: "/search", params: ["q": query], page: page)
     }
     
-    func fetchTrending(limit: Int) -> Observable<[Gif]> {
+    func fetchTrending(limit: Int) -> Observable<GifList> {
         return fetchGifs(path: "/trending", params: [:], page: (offset: 0, limit: limit))
     }
     
-    private func fetchGifs(path: String, params: [String: String], page: GifResultPage) -> Observable<[Gif]> {
+    private func fetchGifs(path: String, params: [String: String], page: GifPage) -> Observable<GifList> {
         var urlParams = params
         urlParams["offset"] = String(page.offset)
         urlParams["limit"] = String(page.limit)
-        return json(url(path: path, params: urlParams)) { $0["data"].map(Gif.init) }
+        
+        return json(url(path: path, params: urlParams)) { json in
+            let items = json["data"].map(Gif.init)
+            let pagination = json["pagination"]
+            let totalCount = (pagination["total_count"].int ?? pagination["count"].int) ?? items.count
+            return (items, totalCount)
+        }
     }
     
     private func json<T>(_ url: URL, parse: @escaping (JSON) -> T?) -> Observable<T> {
