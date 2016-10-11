@@ -6,7 +6,7 @@ final class GifSearchInteractor {
     static let perPageLimit = 25
     
     // UI Outputs
-    lazy var gifs: Driver<[GifPM]> = self.gifsDriver(actions: self.actions)
+    lazy var gifList: Driver<ListPM<GifPM>> = self.gifsDriver(actions: self.actions)
     
     // Scene Outputs
     let cellSelected: ControlEvent<GifPM>
@@ -22,11 +22,11 @@ final class GifSearchInteractor {
         cellSelected = actions.cellSelected
     }
     
-    private func gifsDriver(actions: GifSearchUI.Actions) -> Driver<[GifPM]> {
+    private func gifsDriver(actions: GifSearchUI.Actions) -> Driver<ListPM<GifPM>> {
         return actions.search.asDriver()
             .throttle(0.3)
             .distinctUntilChanged()
-            .flatMapLatest { query -> Driver<[GifPM]> in
+            .flatMapLatest { query -> Driver<ListPM<GifPM>> in
                 if query.isEmpty { return self.toPresentation(gifs: self.gateway.fetchTrending(limit: GifSearchInteractor.perPageLimit)) }
                 return self.toPresentation(gifs: self.searchGifs(loaded: [], query: query, nextPage: actions.loadNextPage))
             }
@@ -50,10 +50,10 @@ final class GifSearchInteractor {
         }
     }
     
-    private func toPresentation(gifs: Observable<GifList>) -> Driver<[GifPM]> {
+    private func toPresentation(gifs: Observable<GifList>) -> Driver<ListPM<GifPM>> {
         return gifs.retry()
             .observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .background))
-            .map { $0.items.map(GifPM.init) }
-            .asDriver(onErrorJustReturn: [])
+            .map { ListPM(items: $0.items.map(GifPM.init), hasMore: $0.items.count < $0.totalCount) }
+            .asDriver(onErrorJustReturn: ListPM<GifPM>.empty())
     }
 }

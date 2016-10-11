@@ -40,6 +40,7 @@
 		DC8C2CC81DA58D4600F2A211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8C2CC61DA58D4600F2A211 /* LaunchScreen.storyboard */; };
 		DC8C2CD31DA58D4600F2A211 /* ProtiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */; };
 		DC8C2CDE1DA58D4600F2A211 /* ProtiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */; };
+		DC9524E11DAD499E00C84B7E /* ListPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524E01DAD499E00C84B7E /* ListPM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		DC8C2CD91DA58D4600F2A211 /* ProtiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtiumUITests.swift; sourceTree = "<group>"; };
 		DC8C2CDF1DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC9524E01DAD499E00C84B7E /* ListPM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPM.swift; sourceTree = "<group>"; };
 		DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 			children = (
 				DC1941E41DA5B0850027A97A /* Context.swift */,
 				DC1941E61DA6DCB40027A97A /* InteractableUI.swift */,
+				DC9524E01DAD499E00C84B7E /* ListPM.swift */,
 				DC1941EA1DA6EB800027A97A /* NavigationContext.swift */,
 				DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */,
 				DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */,
@@ -563,6 +566,7 @@
 				DC1941DF1DA5AB270027A97A /* GifPM.swift in Sources */,
 				DC1941E11DA5AD0B0027A97A /* GifSearchUI.swift in Sources */,
 				DC1941D01DA591450027A97A /* AppDelegate.swift in Sources */,
+				DC9524E11DAD499E00C84B7E /* ListPM.swift in Sources */,
 				DC1941EB1DA6EB800027A97A /* NavigationContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

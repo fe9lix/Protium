@@ -28,7 +28,8 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
         collectionView.register(GifCell.self)
         
         // Update presentation models for cells.
-        interactor.gifs
+        interactor.gifList
+            .map { $0.items }
             .drive(collectionView.rx.items(cellIdentifier: GifCell.reuseIdentifier, cellType: GifCell.self)) { index, model, cell in
                 cell.model = model
             }
