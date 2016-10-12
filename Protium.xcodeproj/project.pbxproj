@@ -38,12 +38,15 @@
 		DC7B6A001DAA9B2A00EC2CF3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */; };
 		DC8C2CC51DA58D4600F2A211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8C2CC41DA58D4600F2A211 /* Assets.xcassets */; };
 		DC8C2CC81DA58D4600F2A211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8C2CC61DA58D4600F2A211 /* LaunchScreen.storyboard */; };
-		DC8C2CD31DA58D4600F2A211 /* ProtiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */; };
 		DC8C2CDE1DA58D4600F2A211 /* ProtiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */; };
 		DC9524E11DAD499E00C84B7E /* ListPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524E01DAD499E00C84B7E /* ListPM.swift */; };
 		DC9524E51DAD4E9000C84B7E /* giphyBadge.gif in Resources */ = {isa = PBXBuildFile; fileRef = DC9524E41DAD4E9000C84B7E /* giphyBadge.gif */; };
 		DC9524E71DAD4F4600C84B7E /* GiphyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524E61DAD4F4600C84B7E /* GiphyBadge.swift */; };
 		DC9524EB1DADB9FD00C84B7E /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EA1DADB9FD00C84B7E /* RxExtensions.swift */; };
+		DC9524ED1DAE643700C84B7E /* GifSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */; };
+		DC9524F01DAE663600C84B7E /* GifStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */; };
+		DC9524F21DAE7C2F00C84B7E /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */; };
+		DCC469891DAEE261001FAAF1 /* GifDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +108,6 @@
 		DC8C2CC71DA58D4600F2A211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC8C2CC91DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8C2CCE1DA58D4600F2A211 /* ProtiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtiumTests.swift; sourceTree = "<group>"; };
 		DC8C2CD41DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8C2CD91DA58D4600F2A211 /* ProtiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtiumUITests.swift; sourceTree = "<group>"; };
@@ -114,6 +116,10 @@
 		DC9524E41DAD4E9000C84B7E /* giphyBadge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphyBadge.gif; sourceTree = "<group>"; };
 		DC9524E61DAD4F4600C84B7E /* GiphyBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyBadge.swift; sourceTree = "<group>"; };
 		DC9524EA1DADB9FD00C84B7E /* RxExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
+		DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchInteractorTests.swift; sourceTree = "<group>"; };
+		DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifStubGateway.swift; sourceTree = "<group>"; };
+		DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailInteractorTests.swift; sourceTree = "<group>"; };
 		DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,8 +260,11 @@
 		DC8C2CD11DA58D4600F2A211 /* ProtiumTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC8C2CD21DA58D4600F2A211 /* ProtiumTests.swift */,
+				DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */,
+				DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */,
+				DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */,
 				DC8C2CD41DA58D4600F2A211 /* Info.plist */,
+				DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */,
 			);
 			path = ProtiumTests;
 			sourceTree = "<group>";
@@ -603,7 +612,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8C2CD31DA58D4600F2A211 /* ProtiumTests.swift in Sources */,
+				DCC469891DAEE261001FAAF1 /* GifDetailInteractorTests.swift in Sources */,
+				DC9524ED1DAE643700C84B7E /* GifSearchInteractorTests.swift in Sources */,
+				DC9524F21DAE7C2F00C84B7E /* TestExtensions.swift in Sources */,
+				DC9524F01DAE663600C84B7E /* GifStubGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

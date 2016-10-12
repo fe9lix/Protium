@@ -1,15 +1,6 @@
-//
-//  ProtiumUITests.swift
-//  ProtiumUITests
-//
-//  Created by Felix Raab on 05/10/2016.
-//  Copyright © 2016 protium-labs. All rights reserved.
-//
-
 import XCTest
 
 class ProtiumUITests: XCTestCase {
-        
     override func setUp() {
         super.setUp()
         
@@ -32,5 +23,4 @@ class ProtiumUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
 }

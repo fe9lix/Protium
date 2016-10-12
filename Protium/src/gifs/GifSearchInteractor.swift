@@ -10,7 +10,7 @@ final class GifSearchInteractor {
     lazy var isLoading: Driver<Bool> = self.loading()
     
     // Scene Outputs
-    let cellSelected: ControlEvent<GifPM>
+    let cellSelected: Driver<GifPM>
     
     // Private
     private let gateway: GifGate
@@ -24,13 +24,16 @@ final class GifSearchInteractor {
     }
     
     private func gifsDriver(actions: GifSearchUI.Actions) -> Driver<ListPM<GifPM>> {
-        return actions.search.asDriver()
-            .throttle(0.3)
+        return actions.search.asObservable()
+            .throttle(0.3, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMapLatest { query -> Driver<ListPM<GifPM>> in
-                if query.isEmpty { return self.toPresentation(gifs: self.gateway.fetchTrending(limit: GifSearchInteractor.perPageLimit)) }
-                return self.toPresentation(gifs: self.searchGifs(loaded: [], query: query, nextPage: actions.loadNextPage))
+            .flatMapLatest { query -> Observable<GifList> in
+                if query.isEmpty { return self.gateway.fetchTrendingGifs(limit: GifSearchInteractor.perPageLimit) }
+                return self.searchGifs(loaded: [], query: query, nextPage: actions.loadNextPage)
             }
+            .observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .background))
+            .map { ListPM(items: $0.items.map(GifPM.init), hasMore: $0.items.count < $0.totalCount) }
+            .asDriver(onErrorJustReturn: ListPM<GifPM>.empty())
     }
     
     private func searchGifs(loaded: [Gif], query: String, nextPage: Observable<Void>) -> Observable<GifList> {
@@ -52,20 +55,12 @@ final class GifSearchInteractor {
     }
     
     private func loading() -> Driver<Bool> {
-        let loadingStarted = actions.loadNextPage.map({ _ in true })
+        let loadingStarted = actions.loadNextPage.asObservable().map({ _ in true })
         let loadingFinished = gifList.asObservable().map({ _ in false })
         let isLoading = Observable.of(loadingStarted, loadingFinished).merge()
         
         return Observable.combineLatest(isLoading, gifList.asObservable()) { $0 && $1.hasMore }
             .distinctUntilChanged()
-            .shareReplay(1)
             .asDriver(onErrorJustReturn: false)
-    }
-    
-    private func toPresentation(gifs: Observable<GifList>) -> Driver<ListPM<GifPM>> {
-        return gifs.retry()
-            .observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .background))
-            .map { ListPM(items: $0.items.map(GifPM.init), hasMore: $0.items.count < $0.totalCount) }
-            .asDriver(onErrorJustReturn: ListPM<GifPM>.empty())
     }
 }

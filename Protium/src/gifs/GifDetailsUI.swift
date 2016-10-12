@@ -55,14 +55,14 @@ final class GifDetailsUI: InteractableUI<GifDetailsInteractor> {
 
 extension GifDetailsUI {
     struct Actions {
-        let copyEmbedLink: ControlEvent<Void>
-        let openGiphy: ControlEvent<Void>
+        let copyEmbedLink: Driver<Void>
+        let openGiphy: Driver<Void>
     }
     
     var actions: Actions {
         return Actions(
-            copyEmbedLink: copyEmbedLinkButton.rx.tap,
-            openGiphy: openGiphyButton.rx.tap
+            copyEmbedLink: copyEmbedLinkButton.rx.tap.asDriver(),
+            openGiphy: openGiphyButton.rx.tap.asDriver()
         )
     }
 }

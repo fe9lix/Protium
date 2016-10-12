@@ -8,7 +8,7 @@ typealias GifList = (items: [Gif], totalCount: Int)
 
 protocol GifGate {
     func searchGifs(query: String, page: GifPage) -> Observable<GifList>
-    func fetchTrending(limit: Int) -> Observable<GifList>
+    func fetchTrendingGifs(limit: Int) -> Observable<GifList>
 }
 
 enum GifGateError: Error {
@@ -33,7 +33,7 @@ final class GifGateway: GifGate {
         return fetchGifs(path: "/search", params: ["q": query], page: page)
     }
     
-    func fetchTrending(limit: Int) -> Observable<GifList> {
+    func fetchTrendingGifs(limit: Int) -> Observable<GifList> {
         return fetchGifs(path: "/trending", params: [:], page: (offset: 0, limit: limit))
     }
     
@@ -53,6 +53,7 @@ final class GifGateway: GifGate {
     private func json<T>(_ url: URL, parse: @escaping (JSON) -> T?) -> Observable<T> {
         return session.rx
             .JSON(url)
+            .retry()
             .observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .background))
             .flatMap { result -> Observable<T> in
                 guard let model = parse(JSON(result)) else { return Observable.error(GifGateError.parsingFailed) }

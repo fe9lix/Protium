@@ -76,17 +76,17 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
 
 extension GifSearchUI {
     struct Actions {
-        let search: ControlProperty<String>
+        let search: Driver<String>
         let loadNextPage: Observable<Void>
-        let cellSelected: ControlEvent<GifPM>
+        let cellSelected: Driver<GifPM>
     }
     
     var actions: Actions {
         return Actions(
-            search: searchTextField.rx.text,
+            search: searchTextField.rx.text.asDriver(),
             loadNextPage: collectionView.rx.contentOffset
                 .flatMap { _ in self.collectionView.isNearBottomEdge(edgeOffset: 20.0) ? Observable.just(()) : Observable.empty() },
-            cellSelected: collectionView.rx.modelSelected(GifPM.self)
+            cellSelected: collectionView.rx.modelSelected(GifPM.self).asDriver()
         )
     }
 }

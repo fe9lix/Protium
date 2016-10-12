@@ -18,7 +18,7 @@ final class GifSearchScene {
         return GifSearchUI.create { ui in
             let interactor = GifSearchInteractor(gateway: self.gateway, actions: ui.actions)
             
-            interactor.cellSelected.subscribe(onNext: { gifPM in
+            interactor.cellSelected.drive(onNext: { gifPM in
                 GifDetailsScene(context: self.context, gateway: self.gateway, gif: Observable.just(gifPM)).presentInContext()
             }).addDisposableTo(ui.disposeBag)
             
