@@ -7,6 +7,7 @@ final class GifSearchInteractor {
     
     // UI Outputs
     lazy var gifList: Driver<ListPM<GifPM>> = self.gifsDriver(actions: self.actions)
+    lazy var isLoading: Driver<Bool> = self.loading()
     
     // Scene Outputs
     let cellSelected: ControlEvent<GifPM>
@@ -48,6 +49,17 @@ final class GifSearchInteractor {
                     self.searchGifs(loaded: loadedList.items, query: query, nextPage: nextPage)
                     ])
         }
+    }
+    
+    private func loading() -> Driver<Bool> {
+        let loadingStarted = actions.loadNextPage.map({ _ in true })
+        let loadingFinished = gifList.asObservable().map({ _ in false })
+        let isLoading = Observable.of(loadingStarted, loadingFinished).merge()
+        
+        return Observable.combineLatest(isLoading, gifList.asObservable()) { $0 && $1.hasMore }
+            .distinctUntilChanged()
+            .shareReplay(1)
+            .asDriver(onErrorJustReturn: false)
     }
     
     private func toPresentation(gifs: Observable<GifList>) -> Driver<ListPM<GifPM>> {

@@ -6,6 +6,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var loadingView: GiphyBadge!
     
     let disposeBag = DisposeBag()
     
@@ -42,6 +43,22 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
                     _ = self.searchTextField.resignFirstResponder()
                 }
             }
+            .addDisposableTo(disposeBag)
+        
+        // Toggle loading state.
+        interactor.isLoading
+            .drive(onNext: { loading in
+                self.collectionView.contentInset = UIEdgeInsets(
+                    top: 0,
+                    left: 0,
+                    bottom: loading ? 72 : 0,
+                    right: 0
+                )}
+            )
+            .addDisposableTo(disposeBag)
+        
+        interactor.isLoading
+            .drive(self.loadingView.rx.visible)
             .addDisposableTo(disposeBag)
     }
     
