@@ -11,29 +11,30 @@
 		A9C27255A864D04718BF5F9D /* Pods_ProtiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2265D97729B826F01324FB /* Pods_ProtiumTests.framework */; };
 		B50B117889A7E7FDBDEC9B3F /* Pods_ProtiumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC02B99D4C0132B63CE1AB3A /* Pods_ProtiumUITests.framework */; };
 		DC1941D01DA591450027A97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941CD1DA591450027A97A /* AppDelegate.swift */; };
-		DC1941D51DA592570027A97A /* GifGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941D41DA592570027A97A /* GifGateway.swift */; };
-		DC1941D81DA59ACA0027A97A /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941D71DA59ACA0027A97A /* Gif.swift */; };
-		DC1941DD1DA5A96E0027A97A /* GifSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941DC1DA5A96E0027A97A /* GifSearchInteractor.swift */; };
-		DC1941DF1DA5AB270027A97A /* GifPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941DE1DA5AB270027A97A /* GifPM.swift */; };
-		DC1941E11DA5AD0B0027A97A /* GifSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E01DA5AD0B0027A97A /* GifSearchUI.swift */; };
-		DC1941E31DA5B0430027A97A /* GifSearchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E21DA5B0430027A97A /* GifSearchScene.swift */; };
 		DC1941E51DA5B0850027A97A /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E41DA5B0850027A97A /* Context.swift */; };
 		DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E61DA6DCB40027A97A /* InteractableUI.swift */; };
 		DC1941E91DA6E9630027A97A /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941E81DA6E9630027A97A /* MainScene.swift */; };
 		DC1941EB1DA6EB800027A97A /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941EA1DA6EB800027A97A /* NavigationContext.swift */; };
 		DC1941ED1DA6EDCA0027A97A /* WindowContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1941EC1DA6EDCA0027A97A /* WindowContext.swift */; };
-		DC1941EF1DA6F03A0027A97A /* GifSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1941EE1DA6F03A0027A97A /* GifSearch.storyboard */; };
-		DC7B69DC1DA94FC100EC2CF3 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69DA1DA94FC100EC2CF3 /* GifCell.swift */; };
-		DC7B69DD1DA94FC100EC2CF3 /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7B69DB1DA94FC100EC2CF3 /* GifCell.xib */; };
+		DC7490DB1DC110E5001CBB40 /* GifDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7490CA1DC110E5001CBB40 /* GifDetails.storyboard */; };
+		DC7490DC1DC110E5001CBB40 /* GifDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490CB1DC110E5001CBB40 /* GifDetailsInteractor.swift */; };
+		DC7490DD1DC110E5001CBB40 /* GifDetailsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490CC1DC110E5001CBB40 /* GifDetailsScene.swift */; };
+		DC7490DE1DC110E5001CBB40 /* GifDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490CD1DC110E5001CBB40 /* GifDetailsUI.swift */; };
+		DC7490DF1DC110E5001CBB40 /* GifPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490CE1DC110E5001CBB40 /* GifPlayerViewController.swift */; };
+		DC7490E01DC110E5001CBB40 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D01DC110E5001CBB40 /* Gif.swift */; };
+		DC7490E11DC110E5001CBB40 /* GifGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D11DC110E5001CBB40 /* GifGateway.swift */; };
+		DC7490E21DC110E5001CBB40 /* GifPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D21DC110E5001CBB40 /* GifPM.swift */; };
+		DC7490E31DC110E5001CBB40 /* GiphyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D31DC110E5001CBB40 /* GiphyBadge.swift */; };
+		DC7490E41DC110E5001CBB40 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D51DC110E5001CBB40 /* GifCell.swift */; };
+		DC7490E51DC110E5001CBB40 /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7490D61DC110E5001CBB40 /* GifCell.xib */; };
+		DC7490E61DC110E5001CBB40 /* GifSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7490D71DC110E5001CBB40 /* GifSearch.storyboard */; };
+		DC7490E71DC110E5001CBB40 /* GifSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D81DC110E5001CBB40 /* GifSearchInteractor.swift */; };
+		DC7490E81DC110E5001CBB40 /* GifSearchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490D91DC110E5001CBB40 /* GifSearchScene.swift */; };
+		DC7490E91DC110E5001CBB40 /* GifSearchUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7490DA1DC110E5001CBB40 /* GifSearchUI.swift */; };
 		DC7B69DF1DA95E1A00EC2CF3 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */; };
 		DC7B69E11DA95EA100EC2CF3 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */; };
 		DC7B69E31DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69E21DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift */; };
-		DC7B69E91DA9A7C800EC2CF3 /* GifDetailsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69E81DA9A7C800EC2CF3 /* GifDetailsScene.swift */; };
-		DC7B69EB1DA9AAC200EC2CF3 /* GifDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69EA1DA9AAC200EC2CF3 /* GifDetailsUI.swift */; };
-		DC7B69ED1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69EC1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift */; };
-		DC7B69EF1DA9AB9C00EC2CF3 /* GifDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7B69EE1DA9AB9C00EC2CF3 /* GifDetails.storyboard */; };
 		DC7B69F11DAA378600EC2CF3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69F01DAA378600EC2CF3 /* Theme.swift */; };
-		DC7B69F91DAA955600EC2CF3 /* GifPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69F81DAA955600EC2CF3 /* GifPlayerViewController.swift */; };
 		DC7B69FC1DAA9AFA00EC2CF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC7B69FE1DAA9AFA00EC2CF3 /* Localizable.strings */; };
 		DC7B6A001DAA9B2A00EC2CF3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */; };
 		DC8C2CC51DA58D4600F2A211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8C2CC41DA58D4600F2A211 /* Assets.xcassets */; };
@@ -41,7 +42,6 @@
 		DC8C2CDE1DA58D4600F2A211 /* ProtiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C2CDD1DA58D4600F2A211 /* ProtiumUITests.swift */; };
 		DC9524E11DAD499E00C84B7E /* ListPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524E01DAD499E00C84B7E /* ListPM.swift */; };
 		DC9524E51DAD4E9000C84B7E /* giphyBadge.gif in Resources */ = {isa = PBXBuildFile; fileRef = DC9524E41DAD4E9000C84B7E /* giphyBadge.gif */; };
-		DC9524E71DAD4F4600C84B7E /* GiphyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524E61DAD4F4600C84B7E /* GiphyBadge.swift */; };
 		DC9524EB1DADB9FD00C84B7E /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EA1DADB9FD00C84B7E /* RxExtensions.swift */; };
 		DC9524ED1DAE643700C84B7E /* GifSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */; };
 		DC9524F01DAE663600C84B7E /* GifStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */; };
@@ -76,31 +76,32 @@
 		AC02B99D4C0132B63CE1AB3A /* Pods_ProtiumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProtiumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2265D97729B826F01324FB /* Pods_ProtiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProtiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1941CD1DA591450027A97A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = main/AppDelegate.swift; sourceTree = "<group>"; };
-		DC1941D41DA592570027A97A /* GifGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifGateway.swift; sourceTree = "<group>"; };
-		DC1941D71DA59ACA0027A97A /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
-		DC1941DC1DA5A96E0027A97A /* GifSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchInteractor.swift; sourceTree = "<group>"; };
-		DC1941DE1DA5AB270027A97A /* GifPM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPM.swift; sourceTree = "<group>"; };
-		DC1941E01DA5AD0B0027A97A /* GifSearchUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchUI.swift; sourceTree = "<group>"; };
-		DC1941E21DA5B0430027A97A /* GifSearchScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchScene.swift; sourceTree = "<group>"; };
 		DC1941E41DA5B0850027A97A /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		DC1941E61DA6DCB40027A97A /* InteractableUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractableUI.swift; sourceTree = "<group>"; };
 		DC1941E81DA6E9630027A97A /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScene.swift; path = main/MainScene.swift; sourceTree = "<group>"; };
 		DC1941EA1DA6EB800027A97A /* NavigationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationContext.swift; sourceTree = "<group>"; };
 		DC1941EC1DA6EDCA0027A97A /* WindowContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowContext.swift; sourceTree = "<group>"; };
-		DC1941EE1DA6F03A0027A97A /* GifSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GifSearch.storyboard; sourceTree = "<group>"; };
-		DC7B69DA1DA94FC100EC2CF3 /* GifCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
-		DC7B69DB1DA94FC100EC2CF3 /* GifCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
+		DC7490CA1DC110E5001CBB40 /* GifDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GifDetails.storyboard; sourceTree = "<group>"; };
+		DC7490CB1DC110E5001CBB40 /* GifDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsInteractor.swift; sourceTree = "<group>"; };
+		DC7490CC1DC110E5001CBB40 /* GifDetailsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsScene.swift; sourceTree = "<group>"; };
+		DC7490CD1DC110E5001CBB40 /* GifDetailsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsUI.swift; sourceTree = "<group>"; };
+		DC7490CE1DC110E5001CBB40 /* GifPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPlayerViewController.swift; sourceTree = "<group>"; };
+		DC7490D01DC110E5001CBB40 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		DC7490D11DC110E5001CBB40 /* GifGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifGateway.swift; sourceTree = "<group>"; };
+		DC7490D21DC110E5001CBB40 /* GifPM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPM.swift; sourceTree = "<group>"; };
+		DC7490D31DC110E5001CBB40 /* GiphyBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyBadge.swift; sourceTree = "<group>"; };
+		DC7490D51DC110E5001CBB40 /* GifCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
+		DC7490D61DC110E5001CBB40 /* GifCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
+		DC7490D71DC110E5001CBB40 /* GifSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GifSearch.storyboard; sourceTree = "<group>"; };
+		DC7490D81DC110E5001CBB40 /* GifSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchInteractor.swift; sourceTree = "<group>"; };
+		DC7490D91DC110E5001CBB40 /* GifSearchScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchScene.swift; sourceTree = "<group>"; };
+		DC7490DA1DC110E5001CBB40 /* GifSearchUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchUI.swift; sourceTree = "<group>"; };
 		DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		DC7B69E21DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
-		DC7B69E81DA9A7C800EC2CF3 /* GifDetailsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsScene.swift; sourceTree = "<group>"; };
-		DC7B69EA1DA9AAC200EC2CF3 /* GifDetailsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsUI.swift; sourceTree = "<group>"; };
-		DC7B69EC1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailsInteractor.swift; sourceTree = "<group>"; };
-		DC7B69EE1DA9AB9C00EC2CF3 /* GifDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GifDetails.storyboard; sourceTree = "<group>"; };
 		DC7B69F01DAA378600EC2CF3 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DC7B69F41DAA90AB00EC2CF3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		DC7B69F61DAA90B100EC2CF3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DC7B69F81DAA955600EC2CF3 /* GifPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifPlayerViewController.swift; sourceTree = "<group>"; };
 		DC7B69FD1DAA9AFA00EC2CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		DC8C2CBA1DA58D4600F2A211 /* Protium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +115,6 @@
 		DC8C2CDF1DA58D4600F2A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9524E01DAD499E00C84B7E /* ListPM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPM.swift; sourceTree = "<group>"; };
 		DC9524E41DAD4E9000C84B7E /* giphyBadge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphyBadge.gif; sourceTree = "<group>"; };
-		DC9524E61DAD4F4600C84B7E /* GiphyBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyBadge.swift; sourceTree = "<group>"; };
 		DC9524EA1DADB9FD00C84B7E /* RxExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
 		DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchInteractorTests.swift; sourceTree = "<group>"; };
 		DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifStubGateway.swift; sourceTree = "<group>"; };
@@ -167,7 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				DC1941D91DA5A2F90027A97A /* base */,
-				DC1941D31DA5918A0027A97A /* gifs */,
+				DC7490C91DC110E5001CBB40 /* gifdetails */,
+				DC7490CF1DC110E5001CBB40 /* gifs */,
+				DC7490D41DC110E5001CBB40 /* gifsearch */,
 				DC1941CC1DA5910F0027A97A /* main */,
 			);
 			path = src;
@@ -180,28 +182,6 @@
 				DC1941E81DA6E9630027A97A /* MainScene.swift */,
 			);
 			name = main;
-			sourceTree = "<group>";
-		};
-		DC1941D31DA5918A0027A97A /* gifs */ = {
-			isa = PBXGroup;
-			children = (
-				DC1941D71DA59ACA0027A97A /* Gif.swift */,
-				DC7B69DA1DA94FC100EC2CF3 /* GifCell.swift */,
-				DC7B69DB1DA94FC100EC2CF3 /* GifCell.xib */,
-				DC7B69EE1DA9AB9C00EC2CF3 /* GifDetails.storyboard */,
-				DC7B69EC1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift */,
-				DC7B69E81DA9A7C800EC2CF3 /* GifDetailsScene.swift */,
-				DC7B69EA1DA9AAC200EC2CF3 /* GifDetailsUI.swift */,
-				DC1941D41DA592570027A97A /* GifGateway.swift */,
-				DC7B69F81DAA955600EC2CF3 /* GifPlayerViewController.swift */,
-				DC1941DE1DA5AB270027A97A /* GifPM.swift */,
-				DC1941EE1DA6F03A0027A97A /* GifSearch.storyboard */,
-				DC1941DC1DA5A96E0027A97A /* GifSearchInteractor.swift */,
-				DC1941E21DA5B0430027A97A /* GifSearchScene.swift */,
-				DC1941E01DA5AD0B0027A97A /* GifSearchUI.swift */,
-				DC9524E61DAD4F4600C84B7E /* GiphyBadge.swift */,
-			);
-			path = gifs;
 			sourceTree = "<group>";
 		};
 		DC1941D91DA5A2F90027A97A /* base */ = {
@@ -220,6 +200,42 @@
 				DC1941EC1DA6EDCA0027A97A /* WindowContext.swift */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		DC7490C91DC110E5001CBB40 /* gifdetails */ = {
+			isa = PBXGroup;
+			children = (
+				DC7490CA1DC110E5001CBB40 /* GifDetails.storyboard */,
+				DC7490CB1DC110E5001CBB40 /* GifDetailsInteractor.swift */,
+				DC7490CC1DC110E5001CBB40 /* GifDetailsScene.swift */,
+				DC7490CD1DC110E5001CBB40 /* GifDetailsUI.swift */,
+				DC7490CE1DC110E5001CBB40 /* GifPlayerViewController.swift */,
+			);
+			path = gifdetails;
+			sourceTree = "<group>";
+		};
+		DC7490CF1DC110E5001CBB40 /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				DC7490D01DC110E5001CBB40 /* Gif.swift */,
+				DC7490D11DC110E5001CBB40 /* GifGateway.swift */,
+				DC7490D21DC110E5001CBB40 /* GifPM.swift */,
+				DC7490D31DC110E5001CBB40 /* GiphyBadge.swift */,
+			);
+			path = gifs;
+			sourceTree = "<group>";
+		};
+		DC7490D41DC110E5001CBB40 /* gifsearch */ = {
+			isa = PBXGroup;
+			children = (
+				DC7490D51DC110E5001CBB40 /* GifCell.swift */,
+				DC7490D61DC110E5001CBB40 /* GifCell.xib */,
+				DC7490D71DC110E5001CBB40 /* GifSearch.storyboard */,
+				DC7490D81DC110E5001CBB40 /* GifSearchInteractor.swift */,
+				DC7490D91DC110E5001CBB40 /* GifSearchScene.swift */,
+				DC7490DA1DC110E5001CBB40 /* GifSearchUI.swift */,
+			);
+			path = gifsearch;
 			sourceTree = "<group>";
 		};
 		DC8C2CB11DA58D4600F2A211 = {
@@ -360,6 +376,7 @@
 				DC8C2CD61DA58D4600F2A211 /* Frameworks */,
 				DC8C2CD71DA58D4600F2A211 /* Resources */,
 				0FFD44434F4F7749BD3368FC /* [CP] Copy Pods Resources */,
+				CF1CF93DCED9D0960F2FE58E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,11 +445,11 @@
 			files = (
 				DC8C2CC81DA58D4600F2A211 /* LaunchScreen.storyboard in Resources */,
 				DC7B69FC1DAA9AFA00EC2CF3 /* Localizable.strings in Resources */,
+				DC7490E51DC110E5001CBB40 /* GifCell.xib in Resources */,
+				DC7490DB1DC110E5001CBB40 /* GifDetails.storyboard in Resources */,
 				DC9524E51DAD4E9000C84B7E /* giphyBadge.gif in Resources */,
 				DC8C2CC51DA58D4600F2A211 /* Assets.xcassets in Resources */,
-				DC7B69EF1DA9AB9C00EC2CF3 /* GifDetails.storyboard in Resources */,
-				DC7B69DD1DA94FC100EC2CF3 /* GifCell.xib in Resources */,
-				DC1941EF1DA6F03A0027A97A /* GifSearch.storyboard in Resources */,
+				DC7490E61DC110E5001CBB40 /* GifSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		0FFD44434F4F7749BD3368FC /* [CP] Copy Pods Resources */ = {
@@ -495,7 +512,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		66EB02A1C0A992D56C9D1845 /* [CP] Copy Pods Resources */ = {
@@ -526,6 +543,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1CF93DCED9D0960F2FE58E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProtiumUITests/Pods-ProtiumUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D44F6AC0C81F91B8A032BD5E /* [CP] Copy Pods Resources */ = {
@@ -570,7 +602,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -580,28 +612,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7490E11DC110E5001CBB40 /* GifGateway.swift in Sources */,
+				DC7490E81DC110E5001CBB40 /* GifSearchScene.swift in Sources */,
+				DC7490E21DC110E5001CBB40 /* GifPM.swift in Sources */,
 				DC7B69E31DA95EFD00EC2CF3 /* UICollectionViewExtensions.swift in Sources */,
 				DC1941ED1DA6EDCA0027A97A /* WindowContext.swift in Sources */,
-				DC7B69DC1DA94FC100EC2CF3 /* GifCell.swift in Sources */,
 				DC1941E91DA6E9630027A97A /* MainScene.swift in Sources */,
-				DC1941E31DA5B0430027A97A /* GifSearchScene.swift in Sources */,
+				DC7490DF1DC110E5001CBB40 /* GifPlayerViewController.swift in Sources */,
 				DC7B69F11DAA378600EC2CF3 /* Theme.swift in Sources */,
+				DC7490E31DC110E5001CBB40 /* GiphyBadge.swift in Sources */,
 				DC7B6A001DAA9B2A00EC2CF3 /* StringExtensions.swift in Sources */,
-				DC9524E71DAD4F4600C84B7E /* GiphyBadge.swift in Sources */,
-				DC7B69E91DA9A7C800EC2CF3 /* GifDetailsScene.swift in Sources */,
-				DC1941D51DA592570027A97A /* GifGateway.swift in Sources */,
-				DC7B69F91DAA955600EC2CF3 /* GifPlayerViewController.swift in Sources */,
-				DC7B69ED1DA9AB1A00EC2CF3 /* GifDetailsInteractor.swift in Sources */,
 				DC9524EB1DADB9FD00C84B7E /* RxExtensions.swift in Sources */,
-				DC7B69EB1DA9AAC200EC2CF3 /* GifDetailsUI.swift in Sources */,
 				DC7B69DF1DA95E1A00EC2CF3 /* ReusableView.swift in Sources */,
+				DC7490E71DC110E5001CBB40 /* GifSearchInteractor.swift in Sources */,
+				DC7490E01DC110E5001CBB40 /* Gif.swift in Sources */,
+				DC7490E41DC110E5001CBB40 /* GifCell.swift in Sources */,
+				DC7490DE1DC110E5001CBB40 /* GifDetailsUI.swift in Sources */,
+				DC7490E91DC110E5001CBB40 /* GifSearchUI.swift in Sources */,
 				DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */,
+				DC7490DC1DC110E5001CBB40 /* GifDetailsInteractor.swift in Sources */,
+				DC7490DD1DC110E5001CBB40 /* GifDetailsScene.swift in Sources */,
 				DC7B69E11DA95EA100EC2CF3 /* NibLoadableView.swift in Sources */,
 				DC1941E51DA5B0850027A97A /* Context.swift in Sources */,
-				DC1941DD1DA5A96E0027A97A /* GifSearchInteractor.swift in Sources */,
-				DC1941D81DA59ACA0027A97A /* Gif.swift in Sources */,
-				DC1941DF1DA5AB270027A97A /* GifPM.swift in Sources */,
-				DC1941E11DA5AD0B0027A97A /* GifSearchUI.swift in Sources */,
 				DC1941D01DA591450027A97A /* AppDelegate.swift in Sources */,
 				DC9524E11DAD499E00C84B7E /* ListPM.swift in Sources */,
 				DC1941EB1DA6EB800027A97A /* NavigationContext.swift in Sources */,
@@ -828,7 +860,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37D38CC4FD1DC5B52E1BA04D /* Pods-ProtiumUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8B6Q2FRE35;
 				INFOPLIST_FILE = ProtiumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -843,7 +874,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B779E032CB69A416068C14C /* Pods-ProtiumUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8B6Q2FRE35;
 				INFOPLIST_FILE = ProtiumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

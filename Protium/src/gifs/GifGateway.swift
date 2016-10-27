@@ -52,9 +52,9 @@ final class GifGateway: GifGate {
     
     private func json<T>(_ url: URL, parse: @escaping (JSON) -> T?) -> Observable<T> {
         return session.rx
-            .JSON(url)
+            .json(url: url)
             .retry()
-            .observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .background))
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .flatMap { result -> Observable<T> in
                 guard let model = parse(JSON(result)) else { return Observable.error(GifGateError.parsingFailed) }
                 return Observable.just(model)
