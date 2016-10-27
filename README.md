@@ -1,4 +1,4 @@
-<img src="http://localhost:2054/Resources/Assets/ProtiumLogo.png" width="304">  
+<img src="./Resources/Assets/ProtiumLogo.png" width="304">  
 <br><br>
 
 [![Protium](https://img.shields.io/badge/protium-v3-blue.svg)](http://protium-labs.co/)
@@ -39,7 +39,7 @@ Major credits go to @cachapa, @mhilscher, @thomaspaulmann who engaged in endless
 ## Demo App
 The demo application shows how the architecture could be applied in Swift project. (For a non-reactive Android demo, see [@cachapa](https://github.com/cachapa/Protium-Demo).) The app contains a screen with a search-as-you-type feature and an infinitely scrolling list. Tapping on a list item triggers navigation to a detail screen with some addtional actions. Although simple, this app demonstrates all elements of the Protium architecture including screen transitions.
 
-<img src="http://localhost:2054/Resources/Assets/DemoApp.png">
+<img src="./Resources/Assets/DemoApp.png">
 
 ## Protium v3
 Before describing all parts and their roles in detail, the following section gives a **high-level overview** of the architecture and summarizes the **flow** starting from a user-triggered action through application layers back to updating the user interface. 
@@ -47,7 +47,7 @@ Before describing all parts and their roles in detail, the following section giv
 ### In a Nutshell
 Protium comprises several **essential** and **optional** elements. The central part where **business logic** resides and **state** is managed is the **Interactor**. It exposes a public interface for a "slice" of the application's use cases. The public interfaces consists of **reactive** **inputs** and **reactive outputs**: An **input** could be an action triggered in the **User Interface**, an **output** could be **Presentation Model** wrapped in a **reactive container**. To fetch data from the **network**, the Interactor uses **Gateways**, stateless facades that encapsulate network logic and asynchronously return **Models** in reactive containers. The **Interactor** post-processes Gateway responses by **creating** **Presentation Models** and dispatches updates through its reactive outputs. The **User Interface** subscribes to **Interactor outputs** and **renders** **Presentation Models**, that is, pushes Presentation Models to child views.
 
-<img src="http://localhost:2054/Resources/Diagrams/ProtiumBasic.png">
+<img src="./Resources/Diagrams/ProtiumBasic.png">
 
 **Gateway** for network calls, **Rx-Observable** for state updates, as well as **Scene** and **Context** for view management and navigation (see below) could be regarded as **optional** while **Model**, **User Interface** and **Interactor** are the **essential** parts of the architecture. In the world of three-letter-architectures, Protium would be most similar to an **MVI** (Model View Interactor) architecture where the Interactor is similar to a View Model.
 
@@ -56,14 +56,14 @@ In medium to large mobile applications, managing **presentation**, **routing** a
 
 **Scene** acts as **factory** for the User Interface and Interactor and wires up the dependencies. To present the User Interface, Scene delegates to a **Presentation Context**, which encapsulates the **presentation and flow logic**. That way, Scene is freed from any knowledge of how the User Interface will be presented. **Scenes** can **subscribe** to reactive outputs from **Interactors** and **present other Scenes** to trigger screen transitions.
 
-<img src="http://localhost:2054/Resources/Diagrams/ProtiumExtended.png">
+<img src="./Resources/Diagrams/ProtiumExtended.png">
 
 ### State Propagation
 Although Rx comes with a number of advantages, excessive use of Rx-Observables can lead to unanticipated effects and updates that are hard to control and debug. This architecture recommends limiting the scope of Rx by keeping reactive state mainly in the Interactor layer and only subscribe with top-level User Interface objects to updates. The parent User Interface then pushes immutable Presentation Model objects down to child views. As updates occur deeper in the view hierarchy, often only a subset of the Presentation Model properties is needed so that simple values can be used instead of pushing the entire models objects to the views.
 
 Vice versa, actions occurring in nested view components are bubbled up and passed via User Interface input streams to the Interactor. Bubbling events up from child views to the User Interface can be implemented using standard delegation/listener patterns or closures. This keeps deeply nested view components free from Rx dependencies. The User Interface then transforms the events to Observable streams or directly uses Rx extensions for simple UI components at the root level. (For example, a button placed at the top level in the User Interface directly exposes its tap event as Observable stream when Rx UI extensions are used.)
 
-<img src="http://localhost:2054/Resources/Diagrams/ProtiumState.png" width="456">
+<img src="./Resources/Diagrams/ProtiumState.png" width="456">
 
 ### Non-reactive Version
 If you prefer to not use Rx, you can still apply the architecture with some changes:
