@@ -33,7 +33,7 @@ The first version of the architecture has been developed by a team of iOS and An
 ### Credits
 Nothing mentioned in this document is really novel. Quite the opposite, the entire architecture could be seen as consolidating well-known principles or components of other known architectures into one coherent model. Protium is heavily inspired by (list is probably incomplete): The CLEAN Architecture, VIPER, Flux, MVC/MVVM, Presentation Patterns such as Presenter/Presentation Model/View Model, ReactiveX Patterns, Domain-Driven-Design Patterns, SOLID Principles etc.
 
-Major credits go to @cachapa, @mhilscher, @thomaspaulmann who engaged in endless discussion and analysis (paralysis ;) sessions about pros and cons of different approaches.
+Major credits go to [@cachapa](https://github.com/cachapa), [@mhilscher](https://github.com/mhilscher), [@thomaspaulmann](https://github.com/thomaspaulmann) who engaged in endless discussion and analysis (paralysis ;) sessions about pros and cons of different approaches.
 
 ## Demo App
 The demo application shows how the architecture could be applied in Swift project. (For a non-reactive Android demo, see [@cachapa](https://github.com/cachapa/Protium-Demo).) The app contains a screen with a search-as-you-type feature and an infinitely scrolling list. Tapping on a list item triggers navigation to a detail screen with some addtional actions. Although simple, this app demonstrates all elements of the Protium architecture including screen transitions.
