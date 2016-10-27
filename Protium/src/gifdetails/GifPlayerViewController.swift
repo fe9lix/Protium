@@ -1,6 +1,7 @@
 import AVFoundation
 import AVKit
 
+// Basic View Controller that plays video gifs in an endless loop.
 final class GifPlayerViewController: AVPlayerViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

@@ -46,6 +46,8 @@
 		DC9524ED1DAE643700C84B7E /* GifSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */; };
 		DC9524F01DAE663600C84B7E /* GifStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */; };
 		DC9524F21DAE7C2F00C84B7E /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */; };
+		DCAB4ABF1DC2A3FF0055A24D /* ModalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */; };
+		DCAB4AC11DC2AC8A0055A24D /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB4AC01DC2AC8A0055A24D /* Logging.swift */; };
 		DCC469891DAEE261001FAAF1 /* GifDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +121,8 @@
 		DC9524EC1DAE643700C84B7E /* GifSearchInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifSearchInteractorTests.swift; sourceTree = "<group>"; };
 		DC9524EF1DAE663600C84B7E /* GifStubGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifStubGateway.swift; sourceTree = "<group>"; };
 		DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalContext.swift; sourceTree = "<group>"; };
+		DCAB4AC01DC2AC8A0055A24D /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailInteractorTests.swift; sourceTree = "<group>"; };
 		DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +194,8 @@
 				DC1941E41DA5B0850027A97A /* Context.swift */,
 				DC1941E61DA6DCB40027A97A /* InteractableUI.swift */,
 				DC9524E01DAD499E00C84B7E /* ListPM.swift */,
+				DCAB4AC01DC2AC8A0055A24D /* Logging.swift */,
+				DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */,
 				DC1941EA1DA6EB800027A97A /* NavigationContext.swift */,
 				DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */,
 				DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */,
@@ -395,7 +401,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "protium-labs";
 				TargetAttributes = {
 					DC8C2CB91DA58D4600F2A211 = {
@@ -619,6 +625,7 @@
 				DC1941ED1DA6EDCA0027A97A /* WindowContext.swift in Sources */,
 				DC1941E91DA6E9630027A97A /* MainScene.swift in Sources */,
 				DC7490DF1DC110E5001CBB40 /* GifPlayerViewController.swift in Sources */,
+				DCAB4AC11DC2AC8A0055A24D /* Logging.swift in Sources */,
 				DC7B69F11DAA378600EC2CF3 /* Theme.swift in Sources */,
 				DC7490E31DC110E5001CBB40 /* GiphyBadge.swift in Sources */,
 				DC7B6A001DAA9B2A00EC2CF3 /* StringExtensions.swift in Sources */,
@@ -627,6 +634,7 @@
 				DC7490E71DC110E5001CBB40 /* GifSearchInteractor.swift in Sources */,
 				DC7490E01DC110E5001CBB40 /* Gif.swift in Sources */,
 				DC7490E41DC110E5001CBB40 /* GifCell.swift in Sources */,
+				DCAB4ABF1DC2A3FF0055A24D /* ModalContext.swift in Sources */,
 				DC7490DE1DC110E5001CBB40 /* GifDetailsUI.swift in Sources */,
 				DC7490E91DC110E5001CBB40 /* GifSearchUI.swift in Sources */,
 				DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */,

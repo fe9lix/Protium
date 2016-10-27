@@ -2,6 +2,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+// Rx extension for an animated "visible" (instead of isHidden) property.
 extension Reactive where Base: UIView {
     public var visible: AnyObserver<Bool> {
         return UIBindingObserver(UIElement: self.base) { view, visible in

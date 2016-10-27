@@ -25,16 +25,19 @@ final class GifSearchInteractor {
         cellImageTapped = actions.cellImageTapped
     }
     
+    // Construction of Drivers/Observables is extracted into separate methods
+    // so that lazy properties and intializers are kept clean.
+    
     private func gifsDriver(actions: GifSearchUI.Actions) -> Driver<ListPM<GifPM>> {
         return actions.search.asObservable()
-            .throttle(0.3, scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .flatMapLatest { query -> Observable<GifList> in
+            .throttle(0.3, scheduler: MainScheduler.instance) // Throttle calls when search string changes quickly.
+            .distinctUntilChanged() // Filter consecutive duplicates.
+            .flatMapLatest { query -> Observable<GifList> in // Perform networking call via Gateway. If the search query is empty, return trending gifs.
                 if query.isEmpty { return self.gateway.fetchTrendingGifs(limit: GifSearchInteractor.perPageLimit) }
                 return self.searchGifs(loaded: [], query: query, nextPage: actions.loadNextPage)
             }
-            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-            .map { ListPM(items: $0.items.map(GifPM.init), hasMore: $0.items.count < $0.totalCount) }
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background)) // Perform conversion to Presentation Models on background queue.
+            .map { ListPM(items: $0.items.map(GifPM.init), hasMore: $0.items.count < $0.totalCount) } // Map Gif Model to Presentation Model.
             .asDriver(onErrorJustReturn: ListPM<GifPM>.empty())
     }
     
@@ -43,19 +46,25 @@ final class GifSearchInteractor {
             .flatMap { gifList -> Observable<GifList> in
                 var loadedList = gifList
                 loadedList.items = loaded + gifList.items
-                
+               
+                // No further items available, so just return all currently loaded items.
                 if loadedList.items.count >= loadedList.totalCount {
                     return Observable.just(loadedList)
                 }
-                
+               
+                // With concat, all previous Observables have to be completed, 
+                // i.e. when the first completes, the second is subscribed to and so on.
+                // The second Observable in the list "blocks" until the nextPage Observable is triggered.
                 return Observable.concat([
                     Observable.just(loadedList),
-                    Observable.never().takeUntil(nextPage),
+                    Observable.never().takeUntil(nextPage), // Do not emit items and do not terminate until nextPage emits an item.
                     self.searchGifs(loaded: loadedList.items, query: query, nextPage: nextPage)
                     ])
         }
     }
     
+    // Derive loading state from Observables:
+    // List is loading when loadNextPage has emitted value and ist has more items to load.
     private func loading() -> Driver<Bool> {
         let loadingStarted = actions.loadNextPage.asObservable().map({ _ in true })
         let loadingFinished = gifList.asObservable().map({ _ in false })

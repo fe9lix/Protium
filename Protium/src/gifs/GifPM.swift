@@ -1,5 +1,9 @@
 import Foundation
 
+// Presentation Model wrapping a Gif Model.
+// Exposes only view-related properties be delgating to the underlying Model.
+// In a more complex example, Presentation Models might have lazy properties,
+// format strings, calculate and cache values etc.
 struct GifPM {
     var id: String { return model.id }
     var url: URL? { return model.url }

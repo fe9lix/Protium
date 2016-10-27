@@ -13,6 +13,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
     fileprivate let cellImageTapped = PublishSubject<GifPM>()
     
     // MARK: - Lifecycle
+    
     class func create(interactorFactory: @escaping (GifSearchUI) -> GifSearchInteractor) -> GifSearchUI {
         return create(
             storyboard: UIStoryboard(name: "GifSearch", bundle: Bundle(for: GifSearchUI.self)),
@@ -27,6 +28,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
     }
     
     // MARK: - Bindings
+    
     override func bindInteractor(interactor: GifSearchInteractor) {
         collectionView.register(GifCell.self)
         
@@ -35,6 +37,10 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
             .map { $0.items }
             .drive(collectionView.rx.items(cellIdentifier: GifCell.reuseIdentifier, cellType: GifCell.self)) { index, model, cell in
                 cell.model = model
+                // Closure registered for demo purposes only:
+                // Shows how an event occuring in a nested view component can be bubbled up.
+                // If the cell support multiple different events, it might make more sense to
+                // use the delegation pattern here instead of closures.
                 cell.imageTapped = { [unowned self] gifPM in
                     self.cellImageTapped.onNext(gifPM)
                 }
@@ -50,7 +56,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
             }
             .addDisposableTo(disposeBag)
         
-        // Toggle loading state.
+        // Toggle loading state: Increase bottom inset to make room for loading badge.
         interactor.isLoading
             .drive(onNext: { loading in
                 self.collectionView.contentInset = UIEdgeInsets(
@@ -68,6 +74,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
     }
     
     // MARK: - Layout
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionViewFlowLayout.itemSize = CGSize(width: (collectionView.bounds.width * 0.5).rounded(.down), height: 100.0)
@@ -80,13 +87,19 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
 }
 
 extension GifSearchUI {
+    // Note that this Struct contains *reference* types as properties,
+    // therefore copy-semantics are different than for pure value types.
+    // The struct here should merely be regarded as convenience container for UI actions 
+    // that are passed as "parameter object" to the Interactor.
     struct Actions {
         let search: Driver<String>
         let loadNextPage: Observable<Void>
         let cellSelected: Driver<GifPM>
         var cellImageTapped: Driver<GifPM>
     }
-    
+   
+    // Extensions only support computed properties. Since this struct is created each time it is accessed,
+    // make sure to reference existing Rx streams here.
     var actions: Actions {
         return Actions(
             search: searchTextField.rx.text.orEmpty.asDriver(),

@@ -2,6 +2,7 @@ import Foundation
 import RxSwift
 @testable import Protium
 
+// Return hard-coded data for early development and testing purposes.
 class GifStubGateway: GifGate {
     func searchGifs(query: String, page: GifPage) -> Observable<GifList> {
         let gifs = (page.offset..<(page.offset + page.limit)).map({ Gif(id: String($0)) })

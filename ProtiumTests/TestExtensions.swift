@@ -1,10 +1,14 @@
 import XCTest
 import RxSwift
 import RxCocoa
-import RxTests
+import RxTest
 @testable import Protium
 
 extension XCTestCase {
+    
+    // Emits the passed in elements at the specified time intervals, e.g.:
+    // stubObservable([("", 0.1), ("cars", 0.2), ("cats", 0.3)])
+    // would emit "" after 0.1 seconds, "cars" after 0.2, and "cats" after 0.3.
     func stubObservable<Element>(_ elements: [(Element, TimeInterval)]) -> Observable<Element> {
         return Observable.create { observer in
             var remainingElements = elements
@@ -60,6 +64,7 @@ extension XCTestCase {
     }
 }
 
+// Convenience extensions for Model/Presentation Model construction.
 extension Gif {
     init(_ url: URL) {
         self.id = ""

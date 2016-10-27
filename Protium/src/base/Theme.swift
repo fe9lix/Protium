@@ -2,6 +2,7 @@ import UIKit
 
 final class Theme {
     // MARK: - Appearance
+    
     class func apply(to window: UIWindow) {
         window.tintColor = UIColor.white
         

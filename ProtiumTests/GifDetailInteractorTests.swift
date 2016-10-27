@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 @testable import Protium
 
+// Example of integration tests for Interactors.
 class GifDetailInteractorTests: XCTestCase {
     private var actions: GifDetailsUI.Actions!
     private var interactor: GifDetailsInteractor!

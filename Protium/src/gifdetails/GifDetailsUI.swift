@@ -11,6 +11,7 @@ final class GifDetailsUI: InteractableUI<GifDetailsInteractor> {
     private var playerViewController: GifPlayerViewController?
     
     // MARK: - Lifecycle
+    
     class func create(interactorFactory: @escaping (GifDetailsUI) -> GifDetailsInteractor) -> GifDetailsUI {
         return create(
             storyboard: UIStoryboard(name: "GifDetails", bundle: Bundle(for: GifDetailsUI.self)),
@@ -35,6 +36,7 @@ final class GifDetailsUI: InteractableUI<GifDetailsInteractor> {
     }
     
     // MARK: - Bindings
+    
     override func bindInteractor(interactor: GifDetailsInteractor) {
         interactor.gif.drive(onNext: { gif in
             self.playVideo(url: gif.videoURL)
@@ -47,6 +49,7 @@ final class GifDetailsUI: InteractableUI<GifDetailsInteractor> {
     }
     
     // MARK: - Video Playback
+    
     private func playVideo(url: URL?) {
         guard let url = url, let playerViewController = playerViewController else { return }
         playerViewController.play(url: url)

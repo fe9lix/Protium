@@ -7,6 +7,7 @@ final class GifCell: UICollectionViewCell {
     
     var model: GifPM! {
         didSet {
+            // Load/cache/animate image via Kingfisher.
             imageView.kf.setImage(with: model.imageURL, options: [.transition(.fade(0.2))])
         }
     }
@@ -19,7 +20,8 @@ final class GifCell: UICollectionViewCell {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        
+       
+        // For demo purposes only.
         imageTapped?(model)
     }
 }

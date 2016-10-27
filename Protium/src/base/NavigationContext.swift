@@ -5,6 +5,9 @@ protocol NavigationContext: Context {
     func pop()
 }
 
+// Presentation Context for stack-like push/pop navigation.
+// Internally uses UINavigationController.
+// See: https://github.com/ReactiveKit/ReactiveGitter/blob/master/Common/NavigationContext.swift
 final class NavigationControllerContext: NavigationContext {
     let parent: Context
     let animated: Bool

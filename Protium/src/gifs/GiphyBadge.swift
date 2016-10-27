@@ -1,6 +1,7 @@
 import UIKit
 import Kingfisher
 
+// Displays animated gif as loading indicator.
 final class GiphyBadge: AnimatedImageView {
     override func awakeFromNib() {
         super.awakeFromNib()

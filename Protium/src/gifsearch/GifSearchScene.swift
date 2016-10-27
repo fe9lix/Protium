@@ -17,13 +17,15 @@ final class GifSearchScene {
     private func ui() -> UIViewController {
         return GifSearchUI.create { ui in
             let interactor = GifSearchInteractor(gateway: self.gateway, actions: ui.actions)
-            
+           
+            // Subscribe to event when cell is selected and present new Scene for details screen.
             interactor.cellSelected.drive(onNext: { gifPM in
                 GifDetailsScene(context: self.context, gateway: self.gateway, gif: Observable.just(gifPM)).presentInContext()
             }).addDisposableTo(ui.disposeBag)
-            
+           
+            // For demo purposes only. Demonstrates how a custom event from a cell could be handled here.
             interactor.cellImageTapped.drive(onNext: { gifPM in
-                print("cellImageTapped", gifPM)
+                log("cellImageTapped: \(gifPM)")
             }).addDisposableTo(ui.disposeBag)
             
             return interactor

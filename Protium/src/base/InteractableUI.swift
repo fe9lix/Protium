@@ -1,5 +1,9 @@
 import UIKit
 
+// Base class for View Controllers. The init/creation methods accept a factory closure that returns an Interactor.
+// The UI passes itself as parameter to the closure so that action streams can be retrieved from the UI and 
+// passed as dependency to the Interactor.
+// See: https://github.com/ReactiveKit/ReactiveGitter/blob/master/Common/DirectedViewController.swift
 class InteractableUI<Interactor>: UIViewController {
     var interactor: Interactor!
     

@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 @testable import Protium
 
+// Example of integration tests for Interactors.
 class GifSearchInteractorTests: XCTestCase {
     private var actions: GifSearchUI.Actions!
     private var interactor: GifSearchInteractor!
@@ -22,7 +23,8 @@ class GifSearchInteractorTests: XCTestCase {
         actions = GifSearchUI.Actions(
             search: stubDriver([("", 0.1), ("cars", 0.2), ("cats", 0.3)]),
             loadNextPage: Observable.empty(),
-            cellSelected: Driver.empty()
+            cellSelected: Driver.empty(),
+            cellImageTapped: Driver<GifPM>.empty()
         )
         
         interactor = GifSearchInteractor(gateway: GifStubGateway(), actions: actions)
