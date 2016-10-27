@@ -1,5 +1,4 @@
 <img src="./Resources/Assets/ProtiumLogo.png" width="304">  
-<br><br>
 
 [![Protium](https://img.shields.io/badge/protium-v3-blue.svg)](http://protium-labs.co/)
 [![Protium](https://img.shields.io/badge/reactive-rx-EC1C92.svg)](http://reactivex.io/)
