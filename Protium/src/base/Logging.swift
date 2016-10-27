@@ -25,11 +25,13 @@ extension Logger {
     }
 }
 
-struct BaseLogger: Logger {}
+struct PrintLogger: Logger {}
 
 var currentLogLevel: LogLevel = .debug
-var currentLogger: Logger = BaseLogger()
+var currentLogger: Logger = PrintLogger()
 
 func log<T>(_ object: @autoclosure () -> T, _ level: LogLevel = .debug, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
+    #if DEBUG
     currentLogger.log(object, level, file, function, line)
+    #endif
 }
