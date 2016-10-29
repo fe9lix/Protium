@@ -37,6 +37,9 @@ Nothing mentioned in this document is really novel. Quite the opposite, the enti
 Major credits go to [@cachapa](https://github.com/cachapa), [@mhilscher](https://github.com/mhilscher), [@thomaspaulmann](https://github.com/thomaspaulmann) who engaged in endless discussion and analysis (paralysis ;) sessions about pros and cons of different approaches.
 
 ## Demo App
+
+<img src="./Resources/Assets/AppIcon.png" width="64">
+
 The demo application shows how the architecture could be applied in a **Swift** project. (For a non-reactive **Android demo**, see [@cachapa](https://github.com/cachapa/Protium-Demo).) The app contains a screen with a search-as-you-type feature and an infinitely scrolling list. Tapping on a list item triggers navigation to a detail screen with some additional actions. Although simple, this app demonstrates all elements of the Protium architecture including presentation logic, screen transitions, and reachability/error handling. 
 
 Note that the app also contains a *base* folder with useful classes and protocol extensions. The contents of this folder, however, is not strictly necessary for the architecture. The app is built with **Xcode 8.1** and **Swift 3.0**.
