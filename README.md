@@ -96,18 +96,18 @@ Another typical Interactor dependency is a Gateway for performing networking tas
 // Simplified example of an Interactor for searching gifs. See demo app for a complete example.
 final class GifSearchInteractor {
     // UI Outputs
-    let gifList: Observable<[GifPM]>
+    let gifList: Driver<[GifPM]>
     
     // Scene Outputs
-    let cellSelected: Observable<GifPM>
+    let cellSelected: Driver<GifPM>
     
     init(gateway: GifGate, actions: GifSearchUI.Actions) {
       // Setup properties...
 
       // Map input action stream containing search query to Gateway call, 
       // map Model response to Presentation Models.
-      gifList = actions.search.asObservable()
-          .flatMap { gateway.searchGifs(query: $0) }
+      gifList = actions.search
+          .flatMap { gateway.searchGifs(query: $0).asDriver(onErrorJustReturn: []) }
           .map { $0.map(GifPM.init) }
     }
 }
@@ -126,7 +126,7 @@ final class GifSearchUI: UIViewController {
     override func viewDidLoad() {
         // Use Rx extensions to bind the Interactor output to a list view.
         // Each cell receives a Presentation Model through a setter that updates the cell.
-        interactor.gifList.asDriver()
+        interactor.gifList
             .drive(collectionView.rx.items(
                 cellIdentifier: GifCell.reuseIdentifier, 
                 cellType: GifCell.self)) { index, model, cell in
@@ -140,14 +140,14 @@ final class GifSearchUI: UIViewController {
 // These streams can then be injected into the Interactor as single value.
 extension GifSearchUI {
     struct Actions {
-        let search: Observable<String>
-        let cellSelected: Observable<GifPM>
+        let search: Driver<String>
+        let cellSelected: Driver<GifPM>
     }
     
     var actions: Actions {
         return Actions(
-            search: searchTextField.rx.text.asObservable(),
-            cellSelected: collectionView.rx.modelSelected(GifPM.self).asObservable()
+            search: searchTextField.rx.text.orEmpty.asDriver()(),
+            cellSelected: collectionView.rx.modelSelected(GifPM.self).asDriver()
         )
     }
 }
