@@ -179,7 +179,7 @@ struct GifPM {
 ```
 
 ### Gateway and Model
-Gateways are stateless facades that encapsulate the logic for accessing external services. (The naming has been [suggested by Martin Fowler](http://martinfowler.com/articles/refactoring-external-service.html).) Internally, the Gateway uses the networking stack of the OS or a convenience networking library to carry out the actual calls and parse the result into Model objects. By asynchronously returning responses via Rx-Observables, Interactors can easily chain calls and handle errors. 
+Gateways are stateless facades that encapsulate the logic for accessing external services. (The naming has been [suggested by Martin Fowler](http://martinfowler.com/articles/refactoring-external-service.html) but the basic concept could also be called *Anticorruption Layer* (DDD) or *Adapter* (GoF).) Internally, the Gateway uses the networking stack of the OS or a convenience networking library to carry out the actual calls and parse the result into Model objects. By asynchronously returning responses via Rx-Observables, Interactors can easily chain calls and handle errors. 
 
 Gateways may also conform to an interface definition so that different implementations can be injected into Interactors. A common use case is to start with a StubGateway that returns hard-coded responses and then use the stub for early development or testing.
 

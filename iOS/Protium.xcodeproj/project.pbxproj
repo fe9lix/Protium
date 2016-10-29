@@ -48,6 +48,7 @@
 		DC9524F21DAE7C2F00C84B7E /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */; };
 		DCAB4ABF1DC2A3FF0055A24D /* ModalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */; };
 		DCAB4AC11DC2AC8A0055A24D /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB4AC01DC2AC8A0055A24D /* Logging.swift */; };
+		DCB14A511DC408970048A7E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB14A501DC408970048A7E4 /* Result.swift */; };
 		DCC469891DAEE261001FAAF1 /* GifDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		DC9524F11DAE7C2F00C84B7E /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalContext.swift; sourceTree = "<group>"; };
 		DCAB4AC01DC2AC8A0055A24D /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		DCB14A501DC408970048A7E4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailInteractorTests.swift; sourceTree = "<group>"; };
 		DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +200,7 @@
 				DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */,
 				DC1941EA1DA6EB800027A97A /* NavigationContext.swift */,
 				DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */,
+				DCB14A501DC408970048A7E4 /* Result.swift */,
 				DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */,
 				DC9524EA1DADB9FD00C84B7E /* RxExtensions.swift */,
 				DC7B69FF1DAA9B2A00EC2CF3 /* StringExtensions.swift */,
@@ -636,6 +639,7 @@
 				DC7490E41DC110E5001CBB40 /* GifCell.swift in Sources */,
 				DCAB4ABF1DC2A3FF0055A24D /* ModalContext.swift in Sources */,
 				DC7490DE1DC110E5001CBB40 /* GifDetailsUI.swift in Sources */,
+				DCB14A511DC408970048A7E4 /* Result.swift in Sources */,
 				DC7490E91DC110E5001CBB40 /* GifSearchUI.swift in Sources */,
 				DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */,
 				DC7490DC1DC110E5001CBB40 /* GifDetailsInteractor.swift in Sources */,
@@ -801,7 +805,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4455BD94460E7CB42F62DACF /* Pods-Protium.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8B6Q2FRE35;
@@ -819,7 +822,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 386CCE1285A3C0AE7BD24E95 /* Pods-Protium.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8B6Q2FRE35;
@@ -836,7 +838,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 8B6Q2FRE35;
 				INFOPLIST_FILE = ProtiumTests/Info.plist;
@@ -852,7 +853,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FC2636B8BA0C3000BF6FDBA /* Pods-ProtiumTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 8B6Q2FRE35;
 				INFOPLIST_FILE = ProtiumTests/Info.plist;

@@ -67,9 +67,9 @@ final class GifGateway: GifGate {
             .json(url: url)
             .retry()
             .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-            .flatMap { result -> Observable<T> in
-                guard let model = parse(JSON(result)) else { return Observable.error(GifGateError.parsingFailed) }
-                return Observable.just(model)
+            .map { result in
+                guard let model = parse(JSON(result)) else { throw GifGateError.parsingFailed }
+                return model
         }
     }
    

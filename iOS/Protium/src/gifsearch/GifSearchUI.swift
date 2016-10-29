@@ -34,7 +34,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
         
         // Update presentation models for cells.
         interactor.gifList
-            .map { $0.items }
+            .map { $0.value?.items ?? [] }
             .drive(collectionView.rx.items(cellIdentifier: GifCell.reuseIdentifier, cellType: GifCell.self)) { index, model, cell in
                 cell.model = model
                 // Closure registered for demo purposes only:
@@ -45,6 +45,14 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
                     self.cellImageTapped.onNext(gifPM)
                 }
             }
+            .addDisposableTo(disposeBag)
+       
+        // Error handling.
+        interactor.gifList
+            .filter { $0.error != nil }
+            .drive(onNext: { result in
+                log(result.error) // Errors could be displayed here. In this example, just log.
+            })
             .addDisposableTo(disposeBag)
         
         // Dismiss Keyboard when list is scrolled.

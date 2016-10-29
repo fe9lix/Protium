@@ -14,7 +14,7 @@ final class GifDetailsInteractor {
     
     init(gateway: GifGate, gif: Observable<GifPM>, actions: GifDetailsUI.Actions) {
         self.gif = gif.asDriver(onErrorJustReturn: GifPM.empty())
-       
+        
         // Set URL of Gif to the Pasteboard when copyEmbedLink Observable is triggered by button tap.
         Observable.combineLatest(gif, actions.copyEmbedLink.asObservable()) { (gif, _) in gif.embedURL }
             .subscribe(onNext: { url in UIPasteboard.general.url = url })

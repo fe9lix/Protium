@@ -25,7 +25,7 @@ final class GifSearchScene {
            
             // For demo purposes only. Demonstrates how a custom event from a cell could be handled here.
             interactor.cellImageTapped.drive(onNext: { gifPM in
-                log("cellImageTapped: \(gifPM)")
+                log(gifPM)
             }).addDisposableTo(ui.disposeBag)
             
             return interactor
