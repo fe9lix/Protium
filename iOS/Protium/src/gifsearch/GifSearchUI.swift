@@ -49,7 +49,7 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
        
         // Error handling.
         interactor.gifList
-            .filter { $0.error != nil }
+            .filter { $0.isError }
             .drive(onNext: { result in
                 log(result.error) // Errors could be displayed here. In this example, just log.
             })

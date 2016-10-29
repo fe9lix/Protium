@@ -21,6 +21,14 @@ enum Result<V, E: Error>: ResultType {
     case success(Value)
     case failure(ErrorType)
     
+    init(_ capturing: () throws -> Value) {
+        do {
+            self = .success(try capturing())
+        } catch (let e) {
+            self = .failure(e as! ErrorType)
+        }
+    }
+    
     var value: Value? {
         switch self {
         case .success(let value): return value
@@ -35,6 +43,13 @@ enum Result<V, E: Error>: ResultType {
         }
     }
     
+    var isError: Bool {
+        switch self {
+        case .success: return false
+        case .failure: return true
+        }
+    }
+    
     func unwrap() throws -> Value {
         switch self {
         case .success(let value): return value
@@ -44,9 +59,9 @@ enum Result<V, E: Error>: ResultType {
 }
 
 extension Result {
-    func map<U>(_ transform: @escaping (Value) -> U) -> Result<U, ErrorType> {
+    func map<U>(_ transform: @escaping (Value) throws -> U) -> Result<U, ErrorType> {
         switch self {
-        case .success(let value): return .success(transform(value))
+        case .success(let value): return Result<U, ErrorType> { try transform(value) }
         case .failure(let error): return .failure(error)
         }
     }
