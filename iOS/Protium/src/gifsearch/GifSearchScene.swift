@@ -2,16 +2,13 @@ import UIKit
 import RxSwift
 
 final class GifSearchScene {
-    private let context: NavigationContext
+    let context: NavigationContext
+    
     private let gateway: GifGate
     
     init(context: NavigationContext, gateway: GifGate) {
         self.context = context
         self.gateway = gateway
-    }
-    
-    func presentInContext() {
-        context.push(ui())
     }
     
     private func ui() -> UIViewController {
@@ -30,5 +27,13 @@ final class GifSearchScene {
             
             return interactor
         }
+    }
+    
+    func presentInContext() {
+        context.push(ui())
+    }
+    
+    func present(_ ui: UIViewController) {
+        context.present(ui)
     }
 }

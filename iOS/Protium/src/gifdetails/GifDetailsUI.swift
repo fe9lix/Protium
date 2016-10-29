@@ -19,6 +19,10 @@ final class GifDetailsUI: InteractableUI<GifDetailsInteractor> {
             ) as! GifDetailsUI
     }
     
+    deinit {
+        log(self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard let identifier = segue.identifier else { return }

@@ -2,7 +2,7 @@ import UIKit
 
 // Presentation Context for modal presentation.
 // See: https://github.com/ReactiveKit/ReactiveGitter/blob/master/Common/ModalContext.swift
-public class ModalContext: Context {
+final class ModalContext: Context {
     let presenter: UIViewController
     let animated: Bool
     

@@ -23,7 +23,6 @@ final class GifSearchUI: InteractableUI<GifSearchInteractor> {
     
     override func viewDidLoad() {
         title = "GifSearch.Title".localized
-        searchTextField.becomeFirstResponder()
         super.viewDidLoad()
     }
     

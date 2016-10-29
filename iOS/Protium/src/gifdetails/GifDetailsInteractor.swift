@@ -24,4 +24,8 @@ final class GifDetailsInteractor {
         urlToOpen = Observable.combineLatest(gif, actions.openGiphy.asObservable()) { (gif, _) in gif.url! }
             .asDriver(onErrorJustReturn: URL(string: "https://www.giphy.com")!)
     }
+    
+    deinit {
+        log(self)
+    }
 }

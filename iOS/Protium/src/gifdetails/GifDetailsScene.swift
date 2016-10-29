@@ -13,8 +13,8 @@ final class GifDetailsScene {
         self.gif = gif
     }
     
-    func presentInContext() {
-        context.push(ui())
+    deinit {
+        log(self)
     }
     
     private func ui() -> UIViewController {
@@ -27,5 +27,9 @@ final class GifDetailsScene {
             
             return interactor
         }
+    }
+    
+    func presentInContext() {
+        context.push(ui())
     }
 }

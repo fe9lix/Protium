@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="faT-4n-pZb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ReachabilityUI-->
+        <scene sceneID="mR3-x9-6fO">
+            <objects>
+                <viewController id="faT-4n-pZb" customClass="ReachabilityUI" customModule="Protium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5nG-hN-Lke"/>
+                        <viewControllerLayoutGuide type="bottom" id="I01-R4-ngU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iES-U1-fpI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconReachability" translatesAutoresizingMaskIntoConstraints="NO" id="s2y-D9-a0h">
+                                <rect key="frame" x="167" y="273.5" width="40" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline? Please check your connection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDs-6x-h1r">
+                                <rect key="frame" x="47" y="334.5" width="282" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s2y-D9-a0h" firstAttribute="centerY" secondItem="iES-U1-fpI" secondAttribute="centerY" constant="-40" id="HXC-EO-pG4"/>
+                            <constraint firstItem="zDs-6x-h1r" firstAttribute="centerX" secondItem="iES-U1-fpI" secondAttribute="centerX" id="Xpf-Ne-o6l"/>
+                            <constraint firstItem="s2y-D9-a0h" firstAttribute="centerX" secondItem="iES-U1-fpI" secondAttribute="centerX" id="k4v-hC-3Bt"/>
+                            <constraint firstItem="zDs-6x-h1r" firstAttribute="top" secondItem="s2y-D9-a0h" secondAttribute="bottom" constant="21" id="puF-X1-T7f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="zDs-6x-h1r" id="Umk-dl-8w2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjQ-BV-hOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="-180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconReachability" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,3 +1,4 @@
 "GifSearch.Title" = "Search Giphy";
 "GifDetails.CopyEmbedLink" = "Copy Embed Link";
 "GifDetails.OpenGiphy" = "Open Giphy";
+"Reachability.Unreachable" = "Offline?\nPlease check your connection.";

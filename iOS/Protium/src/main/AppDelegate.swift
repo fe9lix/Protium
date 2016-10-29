@@ -10,7 +10,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         Theme.apply(to: window!)
-        
+       
+        // Application entry point: Create the Main Scene and pass the app's top-level presentation context.
         mainScene = MainScene(context: WindowContext(window: window!))
         mainScene.presentInContext()
         

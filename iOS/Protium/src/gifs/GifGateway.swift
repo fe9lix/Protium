@@ -20,10 +20,13 @@ enum GifGateError: Error {
 // This Gateway simply uses URLSession and its Rx extension.
 // You might want to use your favorite networking stack here...
 final class GifGateway: GifGate {
+    private let reachabilityService: ReachabilityService
     private let session: URLSession
     private let urlComponents: URLComponents
     
-    init() {
+    init(reachabilityService: ReachabilityService) {
+        self.reachabilityService = reachabilityService
+        
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10.0
         session = URLSession(configuration: configuration)
@@ -65,7 +68,8 @@ final class GifGateway: GifGate {
     private func json<T>(_ url: URL, parse: @escaping (JSON) -> T?) -> Observable<T> {
         return session.rx
             .json(url: url)
-            .retry()
+            .retry(1)
+            .retryOnBecomesReachable(url, reachabilityService: reachabilityService)
             .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .map { result in
                 guard let model = parse(JSON(result)) else { throw GifGateError.parsingFailed }

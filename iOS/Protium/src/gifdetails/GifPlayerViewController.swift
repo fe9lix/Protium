@@ -23,6 +23,7 @@ final class GifPlayerViewController: AVPlayerViewController {
     }
     
     deinit {
+        log(self)
         NotificationCenter.default.removeObserver(self)
     }
     

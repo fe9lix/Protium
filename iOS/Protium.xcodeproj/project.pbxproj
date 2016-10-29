@@ -49,6 +49,10 @@
 		DCAB4ABF1DC2A3FF0055A24D /* ModalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */; };
 		DCAB4AC11DC2AC8A0055A24D /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB4AC01DC2AC8A0055A24D /* Logging.swift */; };
 		DCB14A511DC408970048A7E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB14A501DC408970048A7E4 /* Result.swift */; };
+		DCB14A531DC4D6640048A7E4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB14A521DC4D6640048A7E4 /* Reachability.swift */; };
+		DCB14A551DC4D8B30048A7E4 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB14A541DC4D8B30048A7E4 /* ReachabilityService.swift */; };
+		DCB14A571DC4E58F0048A7E4 /* ReachabilityUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB14A561DC4E58F0048A7E4 /* ReachabilityUI.swift */; };
+		DCB14A591DC4E5BD0048A7E4 /* Reachability.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB14A581DC4E5BD0048A7E4 /* Reachability.storyboard */; };
 		DCC469891DAEE261001FAAF1 /* GifDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +129,10 @@
 		DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalContext.swift; sourceTree = "<group>"; };
 		DCAB4AC01DC2AC8A0055A24D /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		DCB14A501DC408970048A7E4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		DCB14A521DC4D6640048A7E4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DCB14A541DC4D8B30048A7E4 /* ReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		DCB14A561DC4E58F0048A7E4 /* ReachabilityUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReachabilityUI.swift; path = main/ReachabilityUI.swift; sourceTree = "<group>"; };
+		DCB14A581DC4E5BD0048A7E4 /* Reachability.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Reachability.storyboard; path = main/Reachability.storyboard; sourceTree = "<group>"; };
 		DCC469881DAEE261001FAAF1 /* GifDetailInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifDetailInteractorTests.swift; sourceTree = "<group>"; };
 		DDB85603A2B1EBA756F3522F /* Pods-ProtiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProtiumTests/Pods-ProtiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +194,8 @@
 			children = (
 				DC1941CD1DA591450027A97A /* AppDelegate.swift */,
 				DC1941E81DA6E9630027A97A /* MainScene.swift */,
+				DCB14A581DC4E5BD0048A7E4 /* Reachability.storyboard */,
+				DCB14A561DC4E58F0048A7E4 /* ReachabilityUI.swift */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -200,6 +210,8 @@
 				DCAB4ABE1DC2A3FF0055A24D /* ModalContext.swift */,
 				DC1941EA1DA6EB800027A97A /* NavigationContext.swift */,
 				DC7B69E01DA95EA100EC2CF3 /* NibLoadableView.swift */,
+				DCB14A521DC4D6640048A7E4 /* Reachability.swift */,
+				DCB14A541DC4D8B30048A7E4 /* ReachabilityService.swift */,
 				DCB14A501DC408970048A7E4 /* Result.swift */,
 				DC7B69DE1DA95E1A00EC2CF3 /* ReusableView.swift */,
 				DC9524EA1DADB9FD00C84B7E /* RxExtensions.swift */,
@@ -459,6 +471,7 @@
 				DC9524E51DAD4E9000C84B7E /* giphyBadge.gif in Resources */,
 				DC8C2CC51DA58D4600F2A211 /* Assets.xcassets in Resources */,
 				DC7490E61DC110E5001CBB40 /* GifSearch.storyboard in Resources */,
+				DCB14A591DC4E5BD0048A7E4 /* Reachability.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +641,7 @@
 				DC1941ED1DA6EDCA0027A97A /* WindowContext.swift in Sources */,
 				DC1941E91DA6E9630027A97A /* MainScene.swift in Sources */,
 				DC7490DF1DC110E5001CBB40 /* GifPlayerViewController.swift in Sources */,
+				DCB14A531DC4D6640048A7E4 /* Reachability.swift in Sources */,
 				DCAB4AC11DC2AC8A0055A24D /* Logging.swift in Sources */,
 				DC7B69F11DAA378600EC2CF3 /* Theme.swift in Sources */,
 				DC7490E31DC110E5001CBB40 /* GiphyBadge.swift in Sources */,
@@ -640,6 +654,7 @@
 				DCAB4ABF1DC2A3FF0055A24D /* ModalContext.swift in Sources */,
 				DC7490DE1DC110E5001CBB40 /* GifDetailsUI.swift in Sources */,
 				DCB14A511DC408970048A7E4 /* Result.swift in Sources */,
+				DCB14A551DC4D8B30048A7E4 /* ReachabilityService.swift in Sources */,
 				DC7490E91DC110E5001CBB40 /* GifSearchUI.swift in Sources */,
 				DC1941E71DA6DCB50027A97A /* InteractableUI.swift in Sources */,
 				DC7490DC1DC110E5001CBB40 /* GifDetailsInteractor.swift in Sources */,
@@ -647,6 +662,7 @@
 				DC7B69E11DA95EA100EC2CF3 /* NibLoadableView.swift in Sources */,
 				DC1941E51DA5B0850027A97A /* Context.swift in Sources */,
 				DC1941D01DA591450027A97A /* AppDelegate.swift in Sources */,
+				DCB14A571DC4E58F0048A7E4 /* ReachabilityUI.swift in Sources */,
 				DC9524E11DAD499E00C84B7E /* ListPM.swift in Sources */,
 				DC1941EB1DA6EB800027A97A /* NavigationContext.swift in Sources */,
 			);
