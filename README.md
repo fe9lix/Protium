@@ -41,7 +41,7 @@ The demo application shows how the architecture could be applied in a **Swift** 
 
 Note that the app also contains a *base* folder with useful classes and protocol extensions. The contents of this folder, however, is not strictly necessary for the architecture. The app is built with **Xcode 8.1** and **Swift 3.0**.
 
-<img src="./Resources/Assets/DemoApp.png">
+<img src="./Resources/Assets/DemoApp.gif">
 
 ## Protium v3
 Before describing all parts and their roles in detail, the following section gives a **high-level overview** of the architecture and summarizes the **flow** starting from a user-triggered action through application layers back to updating the user interface. 
