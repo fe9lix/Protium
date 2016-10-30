@@ -1,7 +1,7 @@
 import Foundation
 
 // Presentation Model wrapping a Gif Model.
-// Exposes only view-related properties be delgating to the underlying Model.
+// Exposes only view-related properties be delegating to the underlying Model.
 // In a more complex example, Presentation Models might have lazy properties,
 // format strings, calculate and cache values etc.
 struct GifPM {

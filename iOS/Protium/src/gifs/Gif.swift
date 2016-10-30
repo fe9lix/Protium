@@ -1,6 +1,9 @@
 import Foundation
 import JASON
 
+// Simple struct for storing some Gif properties.
+// The extension provides a convenience initializer that uses the JASON library 
+// for parsing JSON into model properties.
 struct Gif {
     let id: String
     let url: URL?

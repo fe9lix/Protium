@@ -32,7 +32,7 @@ class GifSearchInteractorTests: XCTestCase {
         var count = 0
         interactor.gifList.drive(onNext: { gifList in
             count += 1
-            XCTAssertEqual(gifList.items.count, GifSearchInteractor.perPageLimit)
+            XCTAssertEqual(gifList.value!.items.count, GifSearchInteractor.perPageLimit)
             if count == 2 {
                 testExpectation.fulfill()
             }

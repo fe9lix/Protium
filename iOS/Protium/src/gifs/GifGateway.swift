@@ -50,7 +50,7 @@ final class GifGateway: GifGate {
     
     // MARK: - Private Methods
     
-    // Fetches a page of gifs. The JSON response is parsed into Model objects and wrapped into an Observable.
+    // Fetches a page of gifs. The JSON response is parsed into Model objects and wrapped in an Observable.
     private func fetchGifs(path: String, params: [String: String], page: GifPage) -> Observable<GifList> {
         var urlParams = params
         urlParams["offset"] = String(page.offset)
@@ -77,7 +77,7 @@ final class GifGateway: GifGate {
         }
     }
    
-    // Constructs the complete URL based on the base url components, the passed in path and params.
+    // Constructs the complete URL based on the base url components, the path, and params for the query string.
     private func url(path: String, params: [String: String]) -> URL {
         var components = urlComponents
         components.path += path

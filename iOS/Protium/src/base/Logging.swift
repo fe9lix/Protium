@@ -2,7 +2,6 @@ import Foundation
 
 // See: https://github.com/casademora/CoreHTTP/blob/master/Library/Logging.swift
 // and: https://gist.github.com/Abizern/a81f31a75e1ad98ff80d
-
 enum LogLevel: String {
     case debug
     case info

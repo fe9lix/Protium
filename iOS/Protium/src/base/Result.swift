@@ -3,7 +3,6 @@ import Foundation
 // Generic Result Monad:
 // See: https://www.cocoawithlove.com/blog/2016/08/21/result-types-part-one.html
 // and: https://github.com/mattgallagher/CwlUtils/blob/master/CwlUtils/CwlResult.swift
-
 protocol ResultType {
     associatedtype Value
     associatedtype ErrorType: Error

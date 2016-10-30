@@ -7,7 +7,7 @@ final class GifCell: UICollectionViewCell {
     
     var model: GifPM! {
         didSet {
-            // Load/cache/animate image via Kingfisher.
+            // Load/cache/animate image via Kingfisher library.
             imageView.kf.setImage(with: model.imageURL, options: [.transition(.fade(0.2))])
         }
     }

@@ -81,7 +81,7 @@ final class GifSearchInteractor {
     }
     
     // Derive loading state from Observables:
-    // List is loading when loadNextPage has emitted value and ist has more items to load.
+    // List is loading when loadNextPage has emitted value and it has more items to load.
     private func loading() -> Driver<Bool> {
         let loadingStarted = actions.loadNextPage.asObservable().map({ _ in true })
         let loadingFinished = gifList.asObservable().map({ _ in false })

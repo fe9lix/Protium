@@ -22,7 +22,10 @@ final class GifDetailsUI: InteractableUI<GifDetailsInteractor> {
     deinit {
         log(self)
     }
-    
+   
+    // The Gif Player is shown using a container view in the storyboard and an embed segue.
+    // Use the "prepare" call to store a reference to GifPlayerViewController that
+    // starts playback when the Gif-Observable triggers.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard let identifier = segue.identifier else { return }

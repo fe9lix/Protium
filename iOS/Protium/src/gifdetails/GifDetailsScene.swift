@@ -16,7 +16,9 @@ final class GifDetailsScene {
     deinit {
         log(self)
     }
-    
+   
+    // Create the UI and Interactor for the details screen.
+    // Register for updates when the user selects the "Open Giphy" button and present SafariViewController.
     private func ui() -> UIViewController {
         return GifDetailsUI.create { ui in
             let interactor = GifDetailsInteractor(gateway: self.gateway, gif: self.gif, actions: ui.actions)

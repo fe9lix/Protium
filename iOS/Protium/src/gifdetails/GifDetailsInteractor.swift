@@ -20,7 +20,7 @@ final class GifDetailsInteractor {
             .subscribe(onNext: { url in UIPasteboard.general.url = url })
             .addDisposableTo(disposeBag)
        
-        // Set urlToOpen output for Scene, which opens link in Safari. 
+        // Set urlToOpen output for Scene, which then presents the link in Safari.
         urlToOpen = Observable.combineLatest(gif, actions.openGiphy.asObservable()) { (gif, _) in gif.url! }
             .asDriver(onErrorJustReturn: URL(string: "https://www.giphy.com")!)
     }

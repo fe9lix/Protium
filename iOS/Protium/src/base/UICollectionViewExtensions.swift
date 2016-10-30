@@ -1,7 +1,6 @@
 import UIKit
 
-//See: https://realm.io/news/appbuilders-natasha-muraschev-practical-protocol-oriented-programming/
-
+// See: https://realm.io/news/appbuilders-natasha-muraschev-practical-protocol-oriented-programming/
 extension UICollectionView {
     func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
         let nib = UINib(nibName: T.NibName, bundle: nil)
