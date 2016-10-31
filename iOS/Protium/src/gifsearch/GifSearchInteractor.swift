@@ -15,8 +15,8 @@ final class GifSearchInteractor {
     static let perPageLimit = 25
     
     // UI Outputs
-    lazy var gifList: Driver<GifResult> = self.gifsDriver(actions: self.actions)
-    lazy var isLoading: Driver<Bool> = self.loading()
+    lazy var gifList: Driver<GifResult> = self.createGifsDriver(actions: self.actions)
+    lazy var isLoading: Driver<Bool> = self.createLoadingState()
     
     // Scene Outputs
     let cellSelected: Driver<GifPM>
@@ -37,7 +37,7 @@ final class GifSearchInteractor {
     // Construction of Drivers/Observables is extracted into separate methods
     // so that lazy properties and intializers are kept clean.
     
-    private func gifsDriver(actions: GifSearchUI.Actions) -> Driver<GifResult> {
+    private func createGifsDriver(actions: GifSearchUI.Actions) -> Driver<GifResult> {
         return actions.search
             .throttle(0.3) // Throttle calls when search string changes quickly.
             .distinctUntilChanged() // Filter consecutive duplicates.
@@ -82,7 +82,7 @@ final class GifSearchInteractor {
     
     // Derive loading state from Observables:
     // List is loading when loadNextPage has emitted value and it has more items to load.
-    private func loading() -> Driver<Bool> {
+    private func createLoadingState() -> Driver<Bool> {
         let loadingStarted = actions.loadNextPage.asObservable().map({ _ in true })
         let loadingFinished = gifList.asObservable().map({ _ in false })
         let isLoading = Observable.of(loadingStarted, loadingFinished).merge()

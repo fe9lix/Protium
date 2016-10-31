@@ -11,7 +11,7 @@ final class GifSearchScene {
         self.gateway = gateway
     }
     
-    private func ui() -> UIViewController {
+    private func createUI() -> UIViewController {
         return GifSearchUI.create { ui in
             let interactor = GifSearchInteractor(gateway: self.gateway, actions: ui.actions)
            
@@ -30,7 +30,7 @@ final class GifSearchScene {
     }
     
     func presentInContext() {
-        context.push(ui())
+        context.push(createUI())
     }
     
     func present(_ ui: UIViewController) {
