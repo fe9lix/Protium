@@ -1,3 +1,5 @@
+## Note: For another approach to mobile architecture, see the [SAM pattern in Swift](https://github.com/fe9lix/SAM-Swift)
+
 <img src="https://raw.githubusercontent.com/fe9lix/Protium/master/Resources/Assets/ProtiumLogo.png" width="304">
 <br><br>
 
